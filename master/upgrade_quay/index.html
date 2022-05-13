@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Upgrade Red Hat Quay</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Upgrade Red Hat Quay"/><link rel="next" href="#upgrade_overview" title="Chapter 1. Upgrade overview"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46232706137984"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Upgrade Red Hat Quay</h1></div><div><h2 class="subtitle">Upgrade Red Hat Quay</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm46232682343568">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Upgrade Red Hat Quay</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Upgrade Red Hat Quay"/><link rel="next" href="#upgrade_overview" title="Chapter 1. Upgrade overview"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45408719200160"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Upgrade Red Hat Quay</h1></div><div><h2 class="subtitle">Upgrade Red Hat Quay</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm45408698872384">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Upgrade Red Hat Quay
-			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#upgrade_overview">1. Upgrade overview</a></span></li><li><span class="chapter"><a href="#operator-upgrade">2. Upgrading the Quay Operator Overview</a></span><ul><li><span class="section"><a href="#operator_lifecycle_manager">2.1. Operator Lifecycle Manager</a></span></li><li><span class="section"><a href="#upgrading_the_quay_operator">2.2. Upgrading the Quay Operator</a></span><ul><li><span class="section"><a href="#upgrading_quay">2.2.1. Upgrading Quay</a></span></li><li><span class="section"><a href="#upgrade-33-36">2.2.2. Notes on upgrading directly from 3.3.z or 3.4.z to 3.6</a></span></li><li><span class="section"><a href="#changing_the_update_channel_for_an_operator">2.2.3. Changing the update channel for an Operator</a></span></li><li><span class="section"><a href="#manually_approving_a_pending_operator_upgrade">2.2.4. Manually approving a pending Operator upgrade</a></span></li></ul></li><li><span class="section"><a href="#upgrading_a_quayregistry">2.3. Upgrading a QuayRegistry</a></span></li><li><span class="section"><a href="#enabling_features_in_quay_3_6">2.4. Enabling features in Quay 3.6</a></span><ul><li><span class="section"><a href="#console_monitoring_and_alerting">2.4.1. Console monitoring and alerting</a></span></li><li><span class="section"><a href="#oci_and_helm_support">2.4.2. OCI and Helm support</a></span></li></ul></li><li><span class="section"><a href="#upgrading_a_quayecosystem">2.5. Upgrading a QuayEcosystem</a></span><ul><li><span class="section"><a href="#reverting_quayecosystem_upgrade">2.5.1. Reverting QuayEcosystem Upgrade</a></span></li><li><span class="section"><a href="#supported_quayecosystem_configurations_for_upgrades">2.5.2. Supported QuayEcosystem Configurations for Upgrades</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#standalone_upgrade">3. Standalone upgrade</a></span><ul><li><span class="section"><a href="#accessing_images">3.1. Accessing images</a></span></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_5_z">3.2. Upgrade to 3.6.z from 3.5.z</a></span><ul><li><span class="section"><a href="#target_images">3.2.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_4_z">3.3. Upgrade to 3.6.z from 3.4.z</a></span><ul><li><span class="section"><a href="#target_images_2">3.3.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_3_z">3.4. Upgrade to 3.6.z from 3.3.z</a></span><ul><li><span class="section"><a href="#target_images_3">3.4.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_5_7_from_3_4_z">3.5. Upgrade to 3.5.7 from 3.4.z</a></span><ul><li><span class="section"><a href="#target_images_4">3.5.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_4_6_from_3_3_z">3.6. Upgrade to 3.4.6 from 3.3.z</a></span><ul><li><span class="section"><a href="#target_images_5">3.6.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_3_4_from_3_2_z">3.7. Upgrade to 3.3.4 from 3.2.z</a></span><ul><li><span class="section"><a href="#target_images_6">3.7.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_2_2_from_3_1_z">3.8. Upgrade to 3.2.2 from 3.1.z</a></span><ul><li><span class="section"><a href="#target_images_7">3.8.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_1_3_from_3_0_z">3.9. Upgrade to 3.1.3 from 3.0.z</a></span><ul><li><span class="section"><a href="#target_images_8">3.9.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_0_5_from_2_9_5">3.10. Upgrade to 3.0.5 from 2.9.5</a></span><ul><li><span class="section"><a href="#upgrade-v3-concept">3.10.1. Overview of upgrade</a></span></li><li><span class="section"><a href="#quay-upgrade-prereq">3.10.2. Prerequisites</a></span></li><li><span class="section"><a href="#upgrade-v3-proc">3.10.3. Choosing upgrade type</a></span></li><li><span class="section"><a href="#sync-upgrade-v3">3.10.4. Running a synchronous upgrade</a></span></li><li><span class="section"><a href="#background-upgrade-v3">3.10.5. Running a background upgrade</a></span></li><li><span class="section"><a href="#target_images_9">3.10.6. Target images</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#qbo-operator-upgrade">4. Upgrade Quay Bridge Operator</a></span></li></ul></div><section class="chapter" id="upgrade_overview"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Upgrade overview</h1></div></div></div><p>
+			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#upgrade_overview">1. Upgrade overview</a></span></li><li><span class="chapter"><a href="#operator-upgrade">2. Upgrading the Quay Operator Overview</a></span><ul><li><span class="section"><a href="#operator_lifecycle_manager">2.1. Operator Lifecycle Manager</a></span></li><li><span class="section"><a href="#upgrading_the_quay_operator">2.2. Upgrading the Quay Operator</a></span><ul><li><span class="section"><a href="#upgrading_quay">2.2.1. Upgrading Quay</a></span></li><li><span class="section"><a href="#upgrade-33-36">2.2.2. Notes on upgrading directly from 3.3.z or 3.4.z to 3.6</a></span></li><li><span class="section"><a href="#changing_the_update_channel_for_an_operator">2.2.3. Changing the update channel for an Operator</a></span></li><li><span class="section"><a href="#manually_approving_a_pending_operator_upgrade">2.2.4. Manually approving a pending Operator upgrade</a></span></li></ul></li><li><span class="section"><a href="#upgrading_a_quayregistry">2.3. Upgrading a QuayRegistry</a></span></li><li><span class="section"><a href="#enabling_features_in_quay_3_7">2.4. Enabling features in Quay 3.7</a></span><ul><li><span class="section"><a href="#quota_management_configuration">2.4.1. Quota management configuration</a></span></li><li><span class="section"><a href="#using_red_hat_quay_to_proxy_a_remote_organization_configuration">2.4.2. Using Red Hat Quay to proxy a remote organization configuration</a></span></li><li><span class="section"><a href="#red_hat_quay_build_enhancements">2.4.3. Red Hat Quay build enhancements</a></span></li><li><span class="section"><a href="#geo_replication_using_the_red_hat_quay_operator">2.4.4. Geo-replication using the Red Hat Quay Operator</a></span></li></ul></li><li><span class="section"><a href="#enabling_features_in_quay_3_6">2.5. Enabling features in Quay 3.6</a></span><ul><li><span class="section"><a href="#console_monitoring_and_alerting">2.5.1. Console monitoring and alerting</a></span></li><li><span class="section"><a href="#oci_and_helm_support">2.5.2. OCI and Helm support</a></span></li></ul></li><li><span class="section"><a href="#upgrading_a_quayecosystem">2.6. Upgrading a QuayEcosystem</a></span><ul><li><span class="section"><a href="#reverting_quayecosystem_upgrade">2.6.1. Reverting QuayEcosystem Upgrade</a></span></li><li><span class="section"><a href="#supported_quayecosystem_configurations_for_upgrades">2.6.2. Supported QuayEcosystem Configurations for Upgrades</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#standalone_upgrade">3. Standalone upgrade</a></span><ul><li><span class="section"><a href="#accessing_images">3.1. Accessing images</a></span></li><li><span class="section"><a href="#upgrade_to_3_7_z_from_3_6_z">3.2. Upgrade to 3.7.z from 3.6.z</a></span><ul><li><span class="section"><a href="#target_images">3.2.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_7_z_from_3_5_z">3.3. Upgrade to 3.7.z from 3.5.z</a></span><ul><li><span class="section"><a href="#target_images_2">3.3.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_7_z_from_3_4_z">3.4. Upgrade to 3.7.z from 3.4.z</a></span><ul><li><span class="section"><a href="#target_images_3">3.4.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_7_z_from_3_3_z">3.5. Upgrade to 3.7.z from 3.3.z</a></span></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_5_z">3.6. Upgrade to 3.6.z from 3.5.z</a></span><ul><li><span class="section"><a href="#target_images_4">3.6.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_4_z">3.7. Upgrade to 3.6.z from 3.4.z</a></span><ul><li><span class="section"><a href="#target_images_5">3.7.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_6_z_from_3_3_z">3.8. Upgrade to 3.6.z from 3.3.z</a></span><ul><li><span class="section"><a href="#target_images_6">3.8.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_5_7_from_3_4_z">3.9. Upgrade to 3.5.7 from 3.4.z</a></span><ul><li><span class="section"><a href="#target_images_7">3.9.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_4_6_from_3_3_z">3.10. Upgrade to 3.4.6 from 3.3.z</a></span><ul><li><span class="section"><a href="#target_images_8">3.10.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_3_4_from_3_2_z">3.11. Upgrade to 3.3.4 from 3.2.z</a></span><ul><li><span class="section"><a href="#target_images_9">3.11.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_2_2_from_3_1_z">3.12. Upgrade to 3.2.2 from 3.1.z</a></span><ul><li><span class="section"><a href="#target_images_10">3.12.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_1_3_from_3_0_z">3.13. Upgrade to 3.1.3 from 3.0.z</a></span><ul><li><span class="section"><a href="#target_images_11">3.13.1. Target images</a></span></li></ul></li><li><span class="section"><a href="#upgrade_to_3_0_5_from_2_9_5">3.14. Upgrade to 3.0.5 from 2.9.5</a></span><ul><li><span class="section"><a href="#upgrade-v3-concept">3.14.1. Overview of upgrade</a></span></li><li><span class="section"><a href="#quay-upgrade-prereq">3.14.2. Prerequisites</a></span></li><li><span class="section"><a href="#upgrade-v3-proc">3.14.3. Choosing upgrade type</a></span></li><li><span class="section"><a href="#sync-upgrade-v3">3.14.4. Running a synchronous upgrade</a></span></li><li><span class="section"><a href="#background-upgrade-v3">3.14.5. Running a background upgrade</a></span></li><li><span class="section"><a href="#target_images_12">3.14.6. Target images</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#qbo-operator-upgrade">4. Upgrade Quay Bridge Operator</a></span></li></ul></div><section class="chapter" id="upgrade_overview"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Upgrade overview</h1></div></div></div><p>
 			The upgrade procedure for Red Hat Quay depends on the type of installation you are using.
 		</p><p>
 			The Red Hat Quay Operator provides a simple method to deploy and manage a Red Hat Quay cluster. This is the preferred procedure for deploying Red Hat Quay on OpenShift.
@@ -18,15 +18,31 @@
 					When the Quay Operator is installed via Operator Lifecycle Manager, it may be configured to support automatic or manual upgrades. This option is shown on the <span class="strong strong"><strong>Operator Hub</strong></span> page for the Quay Operator during installation. It can also be found in the Quay Operator <code class="literal">Subscription</code> object via the <code class="literal">approvalStrategy</code> field. Choosing <code class="literal">Automatic</code> means that your Quay Operator will automatically be upgraded whenever a new Operator version is released. If this is not desirable, then the <code class="literal">Manual</code> approval strategy should be selected.
 				</p></div></div></section><section class="section" id="upgrading_the_quay_operator"><div class="titlepage"><div><div><h2 class="title">2.2. Upgrading the Quay Operator</h2></div></div></div><p>
 				The standard approach for upgrading installed Operators on OpenShift is documented at <a class="link" href="https://docs.openshift.com/container-platform/4.7/operators/admin/olm-upgrading-operators.html">Upgrading installed Operators</a>.
-			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
-					In general, Red Hat Quay only supports upgrading from one minor version to the next, for example, 3.4 → 3.5. However, for 3.6, multiple upgrade paths are supported:
-				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-							3.3.z → 3.6
-						</li><li class="listitem">
-							3.4.z → 3.6
-						</li><li class="listitem">
-							3.5.z → 3.6
-						</li></ul></div></div></div><p>
+			</p><p>
+				In general, Red Hat Quay supports upgrades from a prior (N-1) minor version only. For example, upgrading directly from Red Hat Quay 3.0.5 to the latest version of 3.5 is not supported. Instead, users would have to upgrade as follows:
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+						3.0.5 → 3.1.3
+					</li><li class="listitem">
+						3.1.3 → 3.2.2
+					</li><li class="listitem">
+						3.2.2 → 3.3.4
+					</li><li class="listitem">
+						3.3.4 → 3.4.z
+					</li><li class="listitem">
+						3.4.z → 3.5.z
+					</li></ol></div><p>
+				This is required to ensure that any necessary database migrations are done correctly and in the right order during the upgrade.
+			</p><p>
+				In some cases, Red Hat Quay supports direct, single-step upgrades from prior (N-2, N-3) minor versions. This exception to the normal, prior minor version-only, upgrade simplifies the upgrade procedure for customers on older releases. The following upgrade paths are supported:
+			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+						3.3.z → 3.6.z
+					</li><li class="listitem">
+						3.4.z → 3.6.z
+					</li><li class="listitem">
+						3.4.z → 3.7.z
+					</li><li class="listitem">
+						3.5.z → 3.7.z
+					</li></ol></div><p>
 				For users on standalone deployments of Quay wanting to upgrade to 3.6, see the <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#standalone_upgrade">Standalone upgrade</a> guide.
 			</p><section class="section" id="upgrading_quay"><div class="titlepage"><div><div><h3 class="title">2.2.1. Upgrading Quay</h3></div></div></div><p>
 					To update Quay from one minor version to the next, for example, 3.4 → 3.5, you need to change the update channel for the Quay Operator.
@@ -81,11 +97,19 @@ spec:
 						If <code class="literal">status.currentVersion</code> equals the Operator version, reconcile as normal.
 					</li><li class="listitem">
 						If <code class="literal">status.currentVersion</code> does not equal the Operator version, check if it can be upgraded. If it can, perform upgrade tasks and set the <code class="literal">status.currentVersion</code> to the Operator’s version once complete. If it cannot be upgraded, return an error and leave the <code class="literal">QuayRegistry</code> and its deployed Kubernetes objects alone.
-					</li></ul></div></section><section class="section" id="enabling_features_in_quay_3_6"><div class="titlepage"><div><div><h2 class="title">2.4. Enabling features in Quay 3.6</h2></div></div></div><section class="section" id="console_monitoring_and_alerting"><div class="titlepage"><div><div><h3 class="title">2.4.1. Console monitoring and alerting</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="enabling_features_in_quay_3_7"><div class="titlepage"><div><div><h2 class="title">2.4. Enabling features in Quay 3.7</h2></div></div></div><section class="section" id="quota_management_configuration"><div class="titlepage"><div><div><h3 class="title">2.4.1. Quota management configuration</h3></div></div></div><p>
+					Quota management is now supported under the <code class="literal">FEATURE_QUOTA_MANAGEMENT</code> property and is turned off by default. To enable quota management, set the feature flag in your <code class="literal">config.yaml</code> to <code class="literal">true</code>:
+				</p><pre class="programlisting language-yaml">FEATURE_QUOTA_MANAGEMENT: true</pre></section><section class="section" id="using_red_hat_quay_to_proxy_a_remote_organization_configuration"><div class="titlepage"><div><div><h3 class="title">2.4.2. Using Red Hat Quay to proxy a remote organization configuration</h3></div></div></div><p>
+					Using Red Hat Quay to proxy a remote organization is now supported under the <code class="literal">FEATURE_PROXY_CACHE</code> property. To enable proxy cache, set the feature flag in your <code class="literal">confg.yaml</code> to <code class="literal">true</code>:
+				</p><pre class="programlisting language-yaml">FEATURE_PROXY_CACHE: true</pre></section><section class="section" id="red_hat_quay_build_enhancements"><div class="titlepage"><div><div><h3 class="title">2.4.3. Red Hat Quay build enhancements</h3></div></div></div><p>
+					Builds can be run on virtualized platforms. Backwards compatibility to run previous build configurations are also available. To enable virtual builds, set the feature flag in your <code class="literal">config.yaml</code> to <code class="literal">true</code>:
+				</p><pre class="programlisting language-yaml">FEATURE_BUILD_SUPPORT: true</pre></section><section class="section" id="geo_replication_using_the_red_hat_quay_operator"><div class="titlepage"><div><div><h3 class="title">2.4.4. Geo-replication using the Red Hat Quay Operator</h3></div></div></div><p>
+					Deployments of Red Hat Quay with geo-replication is now supported by Operator deployments. To enable geo-replication, set the feature flag in your <code class="literal">config.yaml</code> to <code class="literal">true</code>:
+				</p><pre class="programlisting language-yaml">FEATURE_STORAGE_REPLICATION: true</pre></section></section><section class="section" id="enabling_features_in_quay_3_6"><div class="titlepage"><div><div><h2 class="title">2.5. Enabling features in Quay 3.6</h2></div></div></div><section class="section" id="console_monitoring_and_alerting"><div class="titlepage"><div><div><h3 class="title">2.5.1. Console monitoring and alerting</h3></div></div></div><p>
 					The support for monitoring Quay 3.6 in the OpenShift console requires that the Operator is installed in all namespaces. If you previously installed the Operator in a specific namespace, delete the Operator itself and reinstall it for all namespaces once the upgrade has taken place.
-				</p></section><section class="section" id="oci_and_helm_support"><div class="titlepage"><div><div><h3 class="title">2.4.2. OCI and Helm support</h3></div></div></div><p>
+				</p></section><section class="section" id="oci_and_helm_support"><div class="titlepage"><div><div><h3 class="title">2.5.2. OCI and Helm support</h3></div></div></div><p>
 					Support for Helm and some OCI artifacts is now enabled by default in Red Hat Quay 3.7. If you want to explicitly enable the feature, for example, if you are upgrading from a version where it is not enabled by default, you need to reconfigure your Quay deployment to enable the use of OCI artifacts using the following properties:
-				</p><pre class="programlisting language-yaml">FEATURE_GENERAL_OCI_SUPPORT: true</pre></section></section><section class="section" id="upgrading_a_quayecosystem"><div class="titlepage"><div><div><h2 class="title">2.5. Upgrading a QuayEcosystem</h2></div></div></div><p>
+				</p><pre class="programlisting language-yaml">FEATURE_GENERAL_OCI_SUPPORT: true</pre></section></section><section class="section" id="upgrading_a_quayecosystem"><div class="titlepage"><div><div><h2 class="title">2.6. Upgrading a QuayEcosystem</h2></div></div></div><p>
 				Upgrades are supported from previous versions of the Operator which used the <code class="literal">QuayEcosystem</code> API for a limited set of configurations. To ensure that migrations do not happen unexpectedly, a special label needs to be applied to the <code class="literal">QuayEcosystem</code> for it to be migrated. A new <code class="literal">QuayRegistry</code> will be created for the Operator to manage, but the old <code class="literal">QuayEcosystem</code> will remain until manually deleted to ensure that you can roll back and still access Quay in case anything goes wrong. To migrate an existing <code class="literal">QuayEcosystem</code> to a new <code class="literal">QuayRegistry</code>, follow these steps:
 			</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
 						Add <code class="literal">"quay-operator/migrate": "true"</code> to the <code class="literal">metadata.labels</code> of the <code class="literal">QuayEcosystem</code>.
@@ -97,7 +121,7 @@ spec:
 						Once the <code class="literal">status.registryEndpoint</code> of the new <code class="literal">QuayRegistry</code> is set, access Quay and confirm all data and settings were migrated successfully.
 					</li><li class="listitem">
 						When you are confident everything worked correctly, you may delete the <code class="literal">QuayEcosystem</code> and Kubernetes garbage collection will clean up all old resources.
-					</li></ol></div><section class="section" id="reverting_quayecosystem_upgrade"><div class="titlepage"><div><div><h3 class="title">2.5.1. Reverting QuayEcosystem Upgrade</h3></div></div></div><p>
+					</li></ol></div><section class="section" id="reverting_quayecosystem_upgrade"><div class="titlepage"><div><div><h3 class="title">2.6.1. Reverting QuayEcosystem Upgrade</h3></div></div></div><p>
 					If something goes wrong during the automatic upgrade from <code class="literal">QuayEcosystem</code> to <code class="literal">QuayRegistry</code>, follow these steps to revert back to using the <code class="literal">QuayEcosystem</code>:
 				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p class="simpara">
 							Delete the <code class="literal">QuayRegistry</code> using either the UI or <code class="literal">kubectl</code>:
@@ -105,7 +129,7 @@ spec:
 							If external access was provided using a <code class="literal">Route</code>, change the <code class="literal">Route</code> to point back to the original <code class="literal">Service</code> using the UI or <code class="literal">kubectl</code>.
 						</li></ol></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 						If your <code class="literal">QuayEcosystem</code> was managing the Postgres database, the upgrade process will migrate your data to a new Postgres database managed by the upgraded Operator. Your old database will not be changed or removed but Quay will no longer use it once the migration is complete. If there are issues during the data migration, the upgrade process will exit and it is recommended that you continue with your database as an unmanaged component.
-					</p></div></div></section><section class="section" id="supported_quayecosystem_configurations_for_upgrades"><div class="titlepage"><div><div><h3 class="title">2.5.2. Supported QuayEcosystem Configurations for Upgrades</h3></div></div></div><p>
+					</p></div></div></section><section class="section" id="supported_quayecosystem_configurations_for_upgrades"><div class="titlepage"><div><div><h3 class="title">2.6.2. Supported QuayEcosystem Configurations for Upgrades</h3></div></div></div><p>
 					The Quay Operator will report errors in its logs and in <code class="literal">status.conditions</code> if migrating a <code class="literal">QuayEcosystem</code> component fails or is unsupported. All unmanaged components should migrate successfully because no Kubernetes resources need to be adopted and all the necessary values are already provided in Quay’s <code class="literal">config.yaml</code>.
 				</p><p>
 					<span class="strong strong"><strong>Database</strong></span>
@@ -149,13 +173,29 @@ spec:
 					3.4.z → 3.5.z
 				</li></ol></div><p>
 			This is required to ensure that any necessary database migrations are done correctly and in the right order during the upgrade.
-		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
-				Red Hat Quay 3.6 supports direct, single-step upgrade from 3.3.z and from 3.4.z. This exception to the normal, prior minor version-only, upgrade simplifies the upgrade procedure for customers on older releases.
-			</p></div></div><p>
+		</p><p>
+			In some cases, Red Hat Quay supports direct, single-step upgrades from prior (N-2, N-3) minor versions. This exception to the normal, prior minor version-only, upgrade simplifies the upgrade procedure for customers on older releases. The following upgrade paths are supported:
+		</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+					3.3.z → 3.6.z
+				</li><li class="listitem">
+					3.4.z → 3.6.z
+				</li><li class="listitem">
+					3.4.z → 3.7.z
+				</li><li class="listitem">
+					3.5.z → 3.7.z
+				</li></ol></div><p>
 			For users wanting to upgrade via the Quay Operator, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrading_quay_by_upgrading_the_quay_operator">Upgrading Quay by upgrading the Quay Operator</a>.
 		</p><p>
 			This document describes the steps needed to perform each individual upgrade. Determine your current version and then follow the steps in sequential order, starting with your current version and working up to your desired target version.
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_7_z_from_3_6_z">Upgrade to 3.7.z from 3.6.z</a>
+				</li><li class="listitem">
+					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_7_z_from_3_5_z">Upgrade to 3.7.z from 3.5.z</a>
+				</li><li class="listitem">
+					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_7_z_from_3_4_z">Upgrade to 3.7.z from 3.4.z</a>
+				</li><li class="listitem">
+					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_7_z_from_3_3_z">Upgrade to 3.7.z from 3.3.z</a>
+				</li><li class="listitem">
 					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_6_z_from_3_5_z">Upgrade to 3.6.z from 3.5.z</a>
 				</li><li class="listitem">
 					<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_6_z_from_3_4_z">Upgrade to 3.6.z from 3.4.z</a>
@@ -189,7 +229,7 @@ spec:
 				Images for Quay 3.4.0 and later are available from <a class="link" href="https://registry.redhat.io">registry.redhat.io</a> and <a class="link" href="https://registry.access.redhat.com">registry.access.redhat.com</a>, with authentication set up as described in <a class="link" href="https://access.redhat.com/RegistryAuthentication">Red Hat Container Registry Authentication</a>.
 			</p><p>
 				Images for Quay 3.3.4 and earlier are available from <a class="link" href="https://quay.io">quay.io</a>, with authentication set up as described in <a class="link" href="https://access.redhat.com/solutions/3533201">Accessing Red Hat Quay without a CoreOS login</a>.
-			</p></section><section class="section" id="upgrade_to_3_6_z_from_3_5_z"><div class="titlepage"><div><div><h2 class="title">3.2. Upgrade to 3.6.z from 3.5.z</h2></div></div></div><section class="section" id="target_images"><div class="titlepage"><div><div><h3 class="title">3.2.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+			</p></section><section class="section" id="upgrade_to_3_7_z_from_3_6_z"><div class="titlepage"><div><div><h2 class="title">3.2. Upgrade to 3.7.z from 3.6.z</h2></div></div></div><section class="section" id="target_images"><div class="titlepage"><div><div><h3 class="title">3.2.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
@@ -197,11 +237,41 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_6_z_from_3_4_z"><div class="titlepage"><div><div><h2 class="title">3.3. Upgrade to 3.6.z from 3.4.z</h2></div></div></div><p>
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_7_z_from_3_5_z"><div class="titlepage"><div><div><h2 class="title">3.3. Upgrade to 3.7.z from 3.5.z</h2></div></div></div><section class="section" id="target_images_2"><div class="titlepage"><div><div><h3 class="title">3.3.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_7_z_from_3_4_z"><div class="titlepage"><div><div><h2 class="title">3.4. Upgrade to 3.7.z from 3.4.z</h2></div></div></div><section class="section" id="target_images_3"><div class="titlepage"><div><div><h3 class="title">3.4.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_7_z_from_3_3_z"><div class="titlepage"><div><div><h2 class="title">3.5. Upgrade to 3.7.z from 3.3.z</h2></div></div></div><p>
+				Upgrading to Red Hat Quay 3.7 from 3.3. is unsupported. Users must first upgrade to 3.6 from 3.3, and then upgrade to 3.7. For more information, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_6_z_from_3_3_z">Upgrade to 3.6.z from 3.3.z</a>.
+			</p></section><section class="section" id="upgrade_to_3_6_z_from_3_5_z"><div class="titlepage"><div><div><h2 class="title">3.6. Upgrade to 3.6.z from 3.5.z</h2></div></div></div><section class="section" id="target_images_4"><div class="titlepage"><div><div><h3 class="title">3.6.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
+						</li><li class="listitem">
+							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
+						</li><li class="listitem">
+							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_6_z_from_3_4_z"><div class="titlepage"><div><div><h2 class="title">3.7. Upgrade to 3.6.z from 3.4.z</h2></div></div></div><p>
+				+
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Red Hat Quay 3.6 supports direct, single-step upgrade from 3.4.z. This exception to the normal, prior minor version-only, upgrade simplifies the upgrade procedure for customers on older releases.
+				</p></div></div><p>
 				Upgrading to Red Hat Quay 3.6 from 3.4.z requires a database migration which does not support downgrading back to a prior version of Red Hat Quay. Please back up your database before performing this migration.
 			</p><p>
 				Users will also need to configure a completely new Clair v4 instance to replace the old Clair v2 when upgrading from 3.4.z. For instructions on configuring Clair v4, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/manage_red_hat_quay/index#clair-standalone">Setting up Clair on a non-OpenShift Red Hat Quay deployment</a>.
-			</p><section class="section" id="target_images_2"><div class="titlepage"><div><div><h3 class="title">3.3.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+			</p><section class="section" id="target_images_5"><div class="titlepage"><div><div><h3 class="title">3.7.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
@@ -209,11 +279,15 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_6_z_from_3_3_z"><div class="titlepage"><div><div><h2 class="title">3.4. Upgrade to 3.6.z from 3.3.z</h2></div></div></div><p>
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_6_z_from_3_3_z"><div class="titlepage"><div><div><h2 class="title">3.8. Upgrade to 3.6.z from 3.3.z</h2></div></div></div><p>
+				+
+			</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
+					Red Hat Quay 3.6 supports direct, single-step upgrade from 3.3.z. This exception to the normal, prior minor version-only, upgrade simplifies the upgrade procedure for customers on older releases.
+				</p></div></div><p>
 				Upgrading to Red Hat Quay 3.6.z from 3.3.z requires a database migration which does not support downgrading back to a prior version of Red Hat Quay. Please back up your database before performing this migration.
 			</p><p>
 				Users will also need to configure a completely new Clair v4 instance to replace the old Clair v2 when upgrading from 3.3.z. For instructions on configuring Clair v4, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/manage_red_hat_quay/index#clair-standalone">Setting up Clair on a non-OpenShift Red Hat Quay deployment</a>.
-			</p><section class="section" id="target_images_3"><div class="titlepage"><div><div><h3 class="title">3.4.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+			</p><section class="section" id="target_images_6"><div class="titlepage"><div><div><h3 class="title">3.8.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.7.0
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.7.0
@@ -221,7 +295,7 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_5_7_from_3_4_z"><div class="titlepage"><div><div><h2 class="title">3.5. Upgrade to 3.5.7 from 3.4.z</h2></div></div></div><section class="section" id="target_images_4"><div class="titlepage"><div><div><h3 class="title">3.5.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_5_7_from_3_4_z"><div class="titlepage"><div><div><h2 class="title">3.9. Upgrade to 3.5.7 from 3.4.z</h2></div></div></div><section class="section" id="target_images_7"><div class="titlepage"><div><div><h3 class="title">3.9.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.5.7
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.5.7
@@ -229,9 +303,9 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_4_6_from_3_3_z"><div class="titlepage"><div><div><h2 class="title">3.6. Upgrade to 3.4.6 from 3.3.z</h2></div></div></div><p>
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_4_6_from_3_3_z"><div class="titlepage"><div><div><h2 class="title">3.10. Upgrade to 3.4.6 from 3.3.z</h2></div></div></div><p>
 				Upgrading to Quay 3.4 requires a database migration which does not support downgrading back to a prior version of Quay. Please back up your database before performing this migration.
-			</p><section class="section" id="target_images_5"><div class="titlepage"><div><div><h3 class="title">3.6.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+			</p><section class="section" id="target_images_8"><div class="titlepage"><div><div><h3 class="title">3.10.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> registry.redhat.io/quay/quay-rhel8:v3.4.6
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> registry.redhat.io/quay/clair-rhel8:v3.4.6
@@ -239,7 +313,7 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> registry.redhat.io/rhel8/postgresql-10:1
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.redhat.io/rhel8/redis-5:1
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_3_4_from_3_2_z"><div class="titlepage"><div><div><h2 class="title">3.7. Upgrade to 3.3.4 from 3.2.z</h2></div></div></div><section class="section" id="target_images_6"><div class="titlepage"><div><div><h3 class="title">3.7.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_3_4_from_3_2_z"><div class="titlepage"><div><div><h2 class="title">3.11. Upgrade to 3.3.4 from 3.2.z</h2></div></div></div><section class="section" id="target_images_9"><div class="titlepage"><div><div><h3 class="title">3.11.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> quay.io/redhat/quay:v3.3.4
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> quay.io/redhat/clair-jwt:v3.3.4
@@ -247,7 +321,7 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> rhscl/postgresql-96-rhel7
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.access.redhat.com/rhscl/redis-32-rhel7
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_2_2_from_3_1_z"><div class="titlepage"><div><div><h2 class="title">3.8. Upgrade to 3.2.2 from 3.1.z</h2></div></div></div><p>
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_2_2_from_3_1_z"><div class="titlepage"><div><div><h2 class="title">3.12. Upgrade to 3.2.2 from 3.1.z</h2></div></div></div><p>
 				Once your cluster is running any Red Hat Quay 3.1.z version, to upgrade your cluster to 3.2.2 you must bring down your entire cluster and make a small change to the configuration before bringing it back up with the 3.2.2 version.
 			</p><div class="admonition warning"><div class="admonition_header">Warning</div><div><p>
 					Once you set the value of DATABASE_SECRET_KEY in this procedure, do not ever change it. If you do so, then existing robot accounts, API tokens, etc. cannot be used anymore. You would have to create a new robot account and API tokens to use with Quay.
@@ -266,7 +340,7 @@ spec:
 						Once the migration is done, make sure the same <code class="literal">config.yaml</code> is available on all nodes and bring up the new quay 3.2.2 service on those nodes.
 					</li><li class="listitem">
 						Start 3.0.z versions of quay-builder and Clair to replace any instances of those containers you want to return to your cluster.
-					</li></ol></div><section class="section" id="target_images_7"><div class="titlepage"><div><div><h3 class="title">3.8.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ol></div><section class="section" id="target_images_10"><div class="titlepage"><div><div><h3 class="title">3.12.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> quay.io/redhat/quay:v3.2.2
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> quay.io/redhat/clair-jwt:v3.2.2
@@ -274,7 +348,7 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> rhscl/postgresql-96-rhel7
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.access.redhat.com/rhscl/redis-32-rhel7
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_1_3_from_3_0_z"><div class="titlepage"><div><div><h2 class="title">3.9. Upgrade to 3.1.3 from 3.0.z</h2></div></div></div><section class="section" id="target_images_8"><div class="titlepage"><div><div><h3 class="title">3.9.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_1_3_from_3_0_z"><div class="titlepage"><div><div><h2 class="title">3.13. Upgrade to 3.1.3 from 3.0.z</h2></div></div></div><section class="section" id="target_images_11"><div class="titlepage"><div><div><h3 class="title">3.13.1. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> quay.io/redhat/quay:v3.1.3
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> quay.io/redhat/clair-jwt:v3.1.3
@@ -282,11 +356,11 @@ spec:
 							<span class="strong strong"><strong>PostgreSQL:</strong></span> rhscl/postgresql-96-rhel7
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Redis:</strong></span> registry.access.redhat.com/rhscl/redis-32-rhel7
-						</li></ul></div></section></section><section class="section" id="upgrade_to_3_0_5_from_2_9_5"><div class="titlepage"><div><div><h2 class="title">3.10. Upgrade to 3.0.5 from 2.9.5</h2></div></div></div><p>
+						</li></ul></div></section></section><section class="section" id="upgrade_to_3_0_5_from_2_9_5"><div class="titlepage"><div><div><h2 class="title">3.14. Upgrade to 3.0.5 from 2.9.5</h2></div></div></div><p>
 				For the 2.9.5 to 3.0.5 upgrade, you can either do the whole upgrade with Red Hat Quay down (synchronous upgrade) or only bring down Red Hat Quay for a few minutes and have the bulk of the upgrade continue with Red Hat Quay running (background upgrade).
 			</p><p>
 				A background upgrade could take longer to run the upgrade depending on how many tags need to be processed. However, there is less total downtime. The downside of a background upgrade is that you will not have access to the latest features until the upgrade completes. The cluster runs from the Quay v3 container in v2 compatibility mode until the upgrade is complete.
-			</p><section class="section" id="upgrade-v3-concept"><div class="titlepage"><div><div><h3 class="title">3.10.1. Overview of upgrade</h3></div></div></div><p>
+			</p><section class="section" id="upgrade-v3-concept"><div class="titlepage"><div><div><h3 class="title">3.14.1. Overview of upgrade</h3></div></div></div><p>
 					Follow the procedure below if you are starting with a Red Hat Quay 2.y.z cluster. Before upgrading to the latest Red Hat Quay 3.x version, you must first migrate that cluster to 3.0.5, as described <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/upgrade_red_hat_quay/index#upgrade_to_3_0_5_from_2_9_5">here</a>. Once your cluster is running 3.0.5, you can then upgrade to the latest 3.x version by sequentially upgrading to each minor version in turn. For example:
 				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 							3.0.5 → 3.1.3
@@ -306,7 +380,7 @@ spec:
 							<span class="strong strong"><strong>Full features on completion</strong></span>: Before you have access to features associated with Docker version 2, schema 2 changes (such as support for containers of different architectures), the entire migration must complete. Other v3 features are immediately available when you switch over.
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Upgrade complete</strong></span>: When the upgrade is complete, you need to set <span class="strong strong"><strong>V3_UPGRADE_MODE: complete</strong></span> in the Red Hat Quay <code class="literal">config.yaml</code> file for the new features to be available. All new Red Hat Quay v3 installations automatically have that set.
-						</li></ul></div></section><section class="section" id="quay-upgrade-prereq"><div class="titlepage"><div><div><h3 class="title">3.10.2. Prerequisites</h3></div></div></div><p>
+						</li></ul></div></section><section class="section" id="quay-upgrade-prereq"><div class="titlepage"><div><div><h3 class="title">3.14.2. Prerequisites</h3></div></div></div><p>
 					To assure the best results, we recommend the following prerequisites:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							Back up your Red Hat Quay database before starting the upgrade (doing regular backups is a general best practice). A good time to do this is right after you have taken down the Red Hat Quay cluster to do the upgrade.
@@ -320,7 +394,7 @@ spec:
 									Wait for all the database migrations to run, bringing the database up to the latest 2.9.z version. This should only take a few minutes to a half an hour.
 								</li><li class="listitem">
 									Once that is done, replace the <code class="literal">Quay</code> container on all the existing nodes with the same latest 2.9.z version. With the entire Red Hat Quay cluster on the new version, you can proceed to the v3 upgrade.
-								</li></ul></div></li></ul></div></section><section class="section" id="upgrade-v3-proc"><div class="titlepage"><div><div><h3 class="title">3.10.3. Choosing upgrade type</h3></div></div></div><p>
+								</li></ul></div></li></ul></div></section><section class="section" id="upgrade-v3-proc"><div class="titlepage"><div><div><h3 class="title">3.14.3. Choosing upgrade type</h3></div></div></div><p>
 					Choose between a synchronous upgrade (complete the upgrade in downtime) and a background upgrade (complete the upgrade while Red Hat Quay is still running). Both of these major-release upgrades require that the Red Hat Quay cluster be down for at least a short period of time.
 				</p><p>
 					Regardless of which upgrade type you choose, during the time that the Red Hat Quay cluster is down, if you are using builder and Clair images, you need to also upgrade to those new images:
@@ -330,7 +404,7 @@ spec:
 							<span class="strong strong"><strong>Clair</strong></span>: quay.io/redhat/clair-jwt:v3.0.5
 						</li></ul></div><p>
 					Both of those images are available from the registry.redhat.io/quay repository.
-				</p></section><section class="section" id="sync-upgrade-v3"><div class="titlepage"><div><div><h3 class="title">3.10.4. Running a synchronous upgrade</h3></div></div></div><p>
+				</p></section><section class="section" id="sync-upgrade-v3"><div class="titlepage"><div><div><h3 class="title">3.14.4. Running a synchronous upgrade</h3></div></div></div><p>
 					To run a synchronous upgrade, where your whole cluster is down for the entire upgrade, do the following:
 				</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
 							Take down your entire Red Hat Quay cluster, including any quay-builder and Clair containers.
@@ -355,7 +429,7 @@ spec:
 							Start 3.0.z versions of quay-builder and Clair to replace any instances of those containers you want to return to your cluster.
 						</li><li class="listitem">
 							Verify that Red Hat Quay is working, including pushes and pulls of containers compatible with Docker version 2, schema 2. This can include windows container images and images of different computer architectures (arm, ppc, etc.).
-						</li></ol></div></section><section class="section" id="background-upgrade-v3"><div class="titlepage"><div><div><h3 class="title">3.10.5. Running a background upgrade</h3></div></div></div><p>
+						</li></ol></div></section><section class="section" id="background-upgrade-v3"><div class="titlepage"><div><div><h3 class="title">3.14.5. Running a background upgrade</h3></div></div></div><p>
 					To run a background upgrade, you need only bring down your cluster for a short period of time on two occasions. When you bring the cluster back up after the first downtime, the quay v3 container runs in v2 compatibility mode as it backfills the database. This background process can take hours or even days to complete. Background upgrades are recommended for large installations where downtime of more than a few hours would be a problem.
 				</p><p>
 					For this type of upgrade, you put Red Hat Quay into a compatibility mode, where you have a <code class="literal">Quay</code> 3 container running, but it is running on the old data model while the upgrade completes. Here’s what you do:
@@ -396,7 +470,7 @@ spec:
 							Start 3.0.z versions of quay-builder and Clair to replace any instances of those containers you want to return to your cluster.
 						</li><li class="listitem">
 							Verify Quay is working, including pushes and pulls of containers compatible with Docker version 2, schema 2. This can include windows container images and images of different computer architectures (arm, ppc, etc.).
-						</li></ol></div></section><section class="section" id="target_images_9"><div class="titlepage"><div><div><h3 class="title">3.10.6. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						</li></ol></div></section><section class="section" id="target_images_12"><div class="titlepage"><div><div><h3 class="title">3.14.6. Target images</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>Quay:</strong></span> quay.io/redhat/quay:v3.0.5
 						</li><li class="listitem">
 							<span class="strong strong"><strong>Clair:</strong></span> quay.io/redhat/clair-jwt:v3.0.5
@@ -433,7 +507,7 @@ spec:
 					Delete the old <code class="literal">QuayIntegration</code> custom resource.
 				</li><li class="listitem"><p class="simpara">
 					Delete the old <code class="literal">mutatingwebhookconfigurations</code>:
-				</p><pre class="programlisting language-bash">$ oc delete mutatingwebhookconfigurations.admissionregistration.k8s.io quay-bridge-operator</pre></li></ol></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm46232682343568"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+				</p><pre class="programlisting language-bash">$ oc delete mutatingwebhookconfigurations.admissionregistration.k8s.io quay-bridge-operator</pre></li></ol></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm45408698872384"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2022 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
