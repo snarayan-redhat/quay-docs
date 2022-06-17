@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Architecture</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Architecture"/><link rel="next" href="#arch-intro" title="Chapter 1. Red Hat Quay features"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46573180027072"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Architecture</h1></div><div><h2 class="subtitle">Red Hat Quay Architecture</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm46573176374672">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Architecture</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Architecture"/><link rel="next" href="#arch-intro" title="Chapter 1. Red Hat Quay features"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45897162940128"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Architecture</h1></div><div><h2 class="subtitle">Red Hat Quay Architecture</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm45897149668208">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Red Hat Quay Architecture
 			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#arch-intro">1. Red Hat Quay features</a></span></li><li><span class="chapter"><a href="#arch-core-intro">2. Core functionality</a></span><ul><li><span class="section"><a href="#infrastructure">2.1. Infrastructure</a></span><ul><li><span class="section"><a href="#running_quay_on_standalone_hosts">2.1.1. Running Quay on standalone hosts</a></span></li><li><span class="section"><a href="#running_quay_on_openshift">2.1.2. Running Quay on OpenShift</a></span></li><li><span class="section"><a href="#running_quay_outside_openshift">2.1.3. Running Quay outside OpenShift</a></span></li><li><span class="section"><a href="#benefits_of_running_quay_on_openshift">2.1.4. Benefits of running Quay on OpenShift</a></span></li><li><span class="section"><a href="#core-distinct-registries">2.1.5. Single versus multiple registries</a></span></li></ul></li><li><span class="section"><a href="#core-prereqs">2.2. Quay prerequisites</a></span><ul><li><span class="section"><a href="#core-prereqs-storage">2.2.1. Image storage backend</a></span></li><li><span class="section"><a href="#core-prereqs-db">2.2.2. Database backend</a></span></li><li><span class="section"><a href="#core-prereqs-redis">2.2.3. Redis</a></span></li></ul></li><li><span class="section"><a href="#sample-quay-on-prem-intro">2.3. Sample Red Hat Quay on-premise configuration</a></span></li><li><span class="section"><a href="#core-example-deployment">2.4. Red Hat Quay example deployments</a></span></li><li><span class="section"><a href="#deployment-topology">2.5. Red Hat Quay deployment topology</a></span></li><li><span class="section"><a href="#deployment-topology-with-storage-proxy">2.6. Red Hat Quay deployment topology with storage proxy</a></span></li><li><span class="section"><a href="#quay_on_public_cloud">2.7. Quay on public cloud</a></span><ul><li><span class="section"><a href="#running_red_hat_quay_on_aws">2.7.1. Running Red Hat Quay on AWS</a></span></li><li><span class="section"><a href="#running_red_hat_quay_on_microsoft_azure">2.7.2. Running Red Hat Quay on Microsoft Azure</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#security-intro">3. Security Overview</a></span><ul><li><span class="section"><a href="#clair-intro">3.1. Red Hat Quay vulnerability scanning using Clair</a></span><ul><li><span class="section"><a href="#clair-analyses">3.1.1. Understanding Clair analyses</a></span></li><li><span class="section"><a href="#clairv4-intro">3.1.2. Clair v4</a></span></li><li><span class="section"><a href="#clairv4-arch">3.1.3. Clair v4 architecture</a></span></li><li><span class="section"><a href="#clairv2-to-v4">3.1.4. Migrating from Clair v2 to Clair v4</a></span></li><li><span class="section"><a href="#clairv4-limitations">3.1.5. Clair v4 limitations</a></span></li><li><span class="section"><a href="#clairv4-air-gapped">3.1.6. Air-gapped Clair v4</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#content-distrib-intro">4. Content distribution</a></span><ul><li><span class="section"><a href="#mirroring-intro">4.1. Repository mirroring</a></span><ul><li><span class="section"><a href="#mirroring-using">4.1.1. Using repository mirroring</a></span></li><li><span class="section"><a href="#mirroring-recommend">4.1.2. Repository mirroring recommendations</a></span></li><li><span class="section"><a href="#mirroring-events">4.1.3. Event notifications for mirroring</a></span></li><li><span class="section"><a href="#mirroring-api-intro">4.1.4. Mirroring API</a></span></li></ul></li><li><span class="section"><a href="#georepl-intro">4.2. Geo-replication</a></span><ul><li><span class="section"><a href="#geo_replication_features">4.2.1. Geo-replication features</a></span></li><li><span class="section"><a href="#georepl-prereqs">4.2.2. Geo-replication requirements and constraints</a></span></li><li><span class="section"><a href="#georepl-arch-standalone">4.2.3. Geo-replication - standalone Quay</a></span></li><li><span class="section"><a href="#georepl-arch-operator">4.2.4. Geo-replication - Quay Operator</a></span></li><li><span class="section"><a href="#georepl-mixed-storage">4.2.5. Mixed storage for geo-replication</a></span></li></ul></li><li><span class="section"><a href="#mirroring-versus-georepl">4.3. Repository mirroring versus geo-replication</a></span></li><li><span class="section"><a href="#airgap-intro">4.4. Air-gapped / disconnected deployments</a></span><ul><li><span class="section"><a href="#airgap-clair">4.4.1. Using Clair in air-gapped environments</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#access-control-intro">5. Access control</a></span><ul><li><span class="section"><a href="#tenancy-model">5.1. Red Hat Quay tenancy model</a></span></li><li><span class="section"><a href="#repository-organizations-and-users">5.2. Repository organizations and users</a></span><ul><li><span class="section"><a href="#quay-users">5.2.1. Red Hat Quay users</a></span></li><li><span class="section"><a href="#quay-robot-accounts">5.2.2. Red Hat Quay robot accounts</a></span></li><li><span class="section"><a href="#quay-super-users">5.2.3. Red Hat Quay Super users</a></span></li></ul></li><li><span class="section"><a href="#permissions">5.3. Permissions</a></span><ul><li><span class="section"><a href="#role-based-access-control">5.3.1. Role Based Access Control (RBAC)</a></span></li><li><span class="section"><a href="#fine-grained-access-control">5.3.2. Fine Grained Access Control</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#sizing-intro">6. Sizing and subscriptions</a></span><ul><li><span class="section"><a href="#sizing-sample">6.1. Red Hat Quay Sample Sizings</a></span></li><li><span class="section"><a href="#subscription-intro">6.2. Red Hat Quay subscription information</a></span></li><li><span class="section"><a href="#quay-internal-registry-intro">6.3. Using Red Hat Quay with or without internal registry</a></span></li></ul></li><li><span class="chapter"><a href="#scalability-intro">7. Scalability</a></span></li><li><span class="chapter"><a href="#build-automation-intro">8. Build automation</a></span></li><li><span class="chapter"><a href="#integration-intro">9. Integration</a></span></li></ul></div><section class="chapter" id="arch-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Red Hat Quay features</h1></div></div></div><p>
 			Red Hat Quay is a trusted, open source container registry platform that runs everywhere, but runs best on Red Hat OpenShift. It scales without limits, from a developer laptop to a container host or Kubernetes, and can be deployed on-premise or on public cloud. It provides global governance and security controls, with features including image vulnerability scanning, access controls, geo-replication and repository mirroring.
@@ -88,51 +88,51 @@
 							<span class="strong strong"><strong>OpenShift integration:</strong></span> Additional services to leverage OpenShift Monitoring and Alerting facilities to manage multiple Quay deployments on a single cluster
 						</li></ul></div></section><section class="section" id="core-distinct-registries"><div class="titlepage"><div><div><h3 class="title">2.1.5. Single versus multiple registries</h3></div></div></div><p>
 					Many users consider running multiple, distinct registries while the preferred approach with Quay is to have a single, shared registry. The following table addresses the reasons why a user might want to run multiple registries and how these requirements are addressed in Quay:
-				</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46573249637520" scope="col">Multiple registries</th><th align="left" valign="top" id="idm46573177453488" scope="col">Quay approach</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46573249637520">
+				</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45897230198624" scope="col">Multiple registries</th><th align="left" valign="top" id="idm45897165473056" scope="col">Quay approach</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Clear separation between Dev and Prod
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									Use organizations and repositories instead + RBAC Clear separation by content origin<br/> (internal/external)
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm46573249637520">
+								</td></tr><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Use organizations and repositories instead + RBAC Required to test registry upgrades given the criticality of the registry for running apps
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									Quay Operator automates updates, both patch releases as well as minor or major updates that require an ordered sequence of steps to complete
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm46573249637520">
+								</td></tr><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Separate registry in each datacenter (DC)
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									Quay can serve content to multiple physically close DCs<br/><br/> HA can stretch across DCs (requires load balancers)<br/><br/> Quay Geo-Replication can stretch across physically distant DCs (requires global load balancer or DNS-based geo-aware load-balancing)
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm46573249637520">
+								</td></tr><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Separate registry for each cluster
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									Quay can serve content to thousands of clusters
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm46573249637520">
+								</td></tr><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Scalability concerns over single registry
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									Quay scales nearly without limits<br/> (The underlying code base is proven to work at scale at Quay.io)
 								</p>
-								</td></tr><tr><td align="left" valign="top" headers="idm46573249637520">
+								</td></tr><tr><td align="left" valign="top" headers="idm45897230198624">
 								<p>
 									Distinct registry configurations
 								</p>
-								</td><td align="left" valign="top" headers="idm46573177453488">
+								</td><td align="left" valign="top" headers="idm45897165473056">
 								<p>
 									In this scenario it might make sense to run two distinct registries
 								</p>
@@ -330,63 +330,63 @@
 						When a <code class="literal">claircore.Manifest</code> is submitted to the LibIndex, the library will index its constituent parts and create a report with its findings.
 					</p><p>
 						When a <code class="literal">claircore.IndexReport</code> is provided to LibVuln, the library will discover vulnerabilities affecting it and generate a <code class="literal">claircore.Volunerability</code> report.
-					</p><section class="section" id="clairv2-compare-v4"><div class="titlepage"><div><div><h5 class="title">3.1.3.1.1. Clair v2 and Clair v4 Comparison</h5></div></div></div><div class="table" id="idm46573177436848"><p class="title"><strong>Table 3.1. Clair v2 and Clair v4 component comparison</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46573174822288" scope="col">Component</th><th align="left" valign="top" id="idm46573176262224" scope="col">Clair v2</th><th align="left" valign="top" id="idm46573176261360" scope="col">Clair v4</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46573174822288">
+					</p><section class="section" id="clairv2-compare-v4"><div class="titlepage"><div><div><h5 class="title">3.1.3.1.1. Clair v2 and Clair v4 Comparison</h5></div></div></div><div class="table" id="idm45897152490576"><p class="title"><strong>Table 3.1. Clair v2 and Clair v4 component comparison</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45897151786080" scope="col">Component</th><th align="left" valign="top" id="idm45897151784640" scope="col">Clair v2</th><th align="left" valign="top" id="idm45897147566736" scope="col">Clair v4</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45897151786080">
 										<p>
 											API layers
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176262224">
+										</td><td align="left" valign="top" headers="idm45897151784640">
 										<p>
 											In Clair v2, clients were required to provide layers to the API.
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176261360">
+										</td><td align="left" valign="top" headers="idm45897147566736">
 										<p>
 											Clair v4 is manifest-based, providing an easier API for users.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46573174822288">
+										</td></tr><tr><td align="left" valign="top" headers="idm45897151786080">
 										<p>
 											Insights and reports
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176262224">
+										</td><td align="left" valign="top" headers="idm45897151784640">
 										<p>
 											Clair v2 provided only insights on vulnerabilities
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176261360">
+										</td><td align="left" valign="top" headers="idm45897147566736">
 										<p>
 											Clair v4 provides detailed reports on the content of the container, which can be fed to other tools for analyses or inventory purposes.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46573174822288">
+										</td></tr><tr><td align="left" valign="top" headers="idm45897151786080">
 										<p>
 											Architecture
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176262224">
+										</td><td align="left" valign="top" headers="idm45897151784640">
 										<p>
 											Clair v2 ran as a monolithic application.
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176261360">
+										</td><td align="left" valign="top" headers="idm45897147566736">
 										<p>
 											Clair v4 divides functionality across multiple services for ease of development and scaling use cases.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46573174822288">
+										</td></tr><tr><td align="left" valign="top" headers="idm45897151786080">
 										<p>
 											Support for language packages
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176262224">
+										</td><td align="left" valign="top" headers="idm45897151784640">
 										<p>
 											Clair v2 does not support computer language packages.
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176261360">
+										</td><td align="left" valign="top" headers="idm45897147566736">
 										<p>
 											Clair v4 supports Python language packages, with plans of adding more in future versions.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46573174822288">
+										</td></tr><tr><td align="left" valign="top" headers="idm45897151786080">
 										<p>
 											Package locator
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176262224">
+										</td><td align="left" valign="top" headers="idm45897151784640">
 										<p>
 											Clair v2 did not provide details on where packages were located inside of the container.
 										</p>
-										</td><td align="left" valign="top" headers="idm46573176261360">
+										</td><td align="left" valign="top" headers="idm45897147566736">
 										<p>
 											Clair v4 identifies where packages are located inside of the container.
 										</p>
@@ -568,87 +568,87 @@
 						Automatic synchronization or mirroring of selected (whitelisted) upstream repositories from external registries into a local Quay deployment
 					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 					Repository mirroring and geo-replication can be used simultaneously.
-				</p></div></div><div class="table" id="idm46573175730688"><p class="title"><strong>Table 4.1. Red Hat Quay Repository mirroring versus geo-replication</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46573171707616" scope="col">Feature / Capability</th><th align="left" valign="top" id="idm46573171706528" scope="col">Geo-replication</th><th align="left" valign="top" id="idm46573171705440" scope="col">Repository mirroring</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46573171707616">
+				</p></div></div><div class="table" id="idm45897149338912"><p class="title"><strong>Table 4.1. Red Hat Quay Repository mirroring versus geo-replication</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45897148811808" scope="col">Feature / Capability</th><th align="left" valign="top" id="idm45897148810720" scope="col">Geo-replication</th><th align="left" valign="top" id="idm45897148809632" scope="col">Repository mirroring</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								What is the feature designed to do?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								A shared, global registry
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								Distinct, different registries
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								What happens if replication or mirroring hasn’t been completed yet?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								The remote copy is used (slower)
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								No image is served
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								Is access to all storage backends in both regions required?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								Yes (all Red Hat Quay nodes)
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								No (distinct storage)
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								Can users push images from both sites to the same repository?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								Yes
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								No
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								Is all registry content and configuration identical across all regions (shared database)
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								Yes
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								No
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								Can users select individual namespaces or repositories to be mirrored?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								No,by default
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								Yes
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573171707616">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897148811808">
 							<p>
 								Can users apply filters to synchronization rules?
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171706528">
+							</td><td align="left" valign="top" headers="idm45897148810720">
 							<p>
 								No
 							</p>
-							</td><td align="left" valign="top" headers="idm46573171705440">
+							</td><td align="left" valign="top" headers="idm45897148809632">
 							<p>
 								Yes
 							</p>
@@ -698,27 +698,27 @@
 						<span class="strong strong"><strong>Managing team members</strong></span>: used to manage teams within the organization.
 					</li><li class="listitem"><p class="simpara">
 						<span class="strong strong"><strong>Defined permissions</strong></span>:
-					</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46573173770128" scope="col">Permission</th><th align="left" valign="top" id="idm46573173769040" scope="col">Abilities</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46573173770128">
+					</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45897147038784" scope="col">Permission</th><th align="left" valign="top" id="idm45897147037696" scope="col">Abilities</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45897147038784">
 									<p>
 										<span class="strong strong"><strong>Members</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46573173769040">
+									</td><td align="left" valign="top" headers="idm45897147037696">
 									<p>
 										Inherits all permissions sets for the team
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm46573173770128">
+									</td></tr><tr><td align="left" valign="top" headers="idm45897147038784">
 									<p>
 										<span class="strong strong"><strong>Creator</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46573173769040">
+									</td><td align="left" valign="top" headers="idm45897147037696">
 									<p>
 										All member positions, plus the ability to create new repositories
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm46573173770128">
+									</td></tr><tr><td align="left" valign="top" headers="idm45897147038784">
 									<p>
 										<span class="strong strong"><strong>Admin</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46573173769040">
+									</td><td align="left" valign="top" headers="idm45897147037696">
 									<p>
 										Full administrative access to the organization, including the ability to create news, add members, and set permissions.
 									</p>
@@ -834,143 +834,143 @@
 			Stateless components of Red Hat Quay can be scaled out but this will cause a heavier load on stateful backend services.
 		</p><section class="section" id="sizing-sample"><div class="titlepage"><div><div><h2 class="title">6.1. Red Hat Quay Sample Sizings</h2></div></div></div><p>
 				The following table shows typical sizing for three deployment sizes: proof of concept, mid-size, and high-end. Whether a deployment runs appropriately with the same metrics will depend on many other factors not shown below.
-			</p><div class="informaltable"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 40%; " class="col_1"/><col style="width: 20%; " class="col_2"/><col style="width: 20%; " class="col_3"/><col style="width: 20%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm46573174635216" scope="col">Metric</th><th align="center" valign="top" id="idm46573175884800" scope="col">Proof of concept</th><th align="center" valign="top" id="idm46573175883712" scope="col">Mid-size</th><th align="center" valign="top" id="idm46573175882624" scope="col">High End<br/> (Quay.io)</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46573174635216">
+			</p><div class="informaltable"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 40%; " class="col_1"/><col style="width: 20%; " class="col_2"/><col style="width: 20%; " class="col_3"/><col style="width: 20%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm45897149159520" scope="col">Metric</th><th align="center" valign="top" id="idm45897149158432" scope="col">Proof of concept</th><th align="center" valign="top" id="idm45897149157344" scope="col">Mid-size</th><th align="center" valign="top" id="idm45897149156256" scope="col">High End<br/> (Quay.io)</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								No. of Quay containers by default
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								4
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								15
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								No. of Quay containers max at scale-out
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								N/A
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								8
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								30
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								No. of Clair containers by default
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								3
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								10
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								No. of Clair containers max at scale-out
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								N/A
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								6
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								15
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								No. of mirroring pods (to mirror 100 repos)
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								5-10
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								N/A
 							</p>
-							</td></tr><tr><td align="left" valign="middle" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="middle" headers="idm45897149159520">
 							<p>
 								Database sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								2 -4 Cores<br/> 6-8 GB RAM<br/> 10-20GB disk
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								4-8 Cores<br/> 6-32 GB RAM<br/> 100GB-1TB disk
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								32 cores<br/> 244GB<br/> 1+ TB disk
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								Object storage backend sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								10-100 GB
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								1 - 20 TB
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								50+ TB up to PB
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								Redis cache sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800"> </td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149158432"> </td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								2 Cores<br/> 2-4 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								4 cores <br/> 28 GB RAM
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46573174635216">
+							</td></tr><tr><td align="left" valign="top" headers="idm45897149159520">
 							<p>
 								Underlying node sizing<br/> (physical or virtual)
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175884800">
+							</td><td align="center" valign="top" headers="idm45897149158432">
 							<p>
 								4 Cores<br/> 8 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175883712">
+							</td><td align="center" valign="top" headers="idm45897149157344">
 							<p>
 								4-6 Cores<br/> 12-16 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46573175882624">
+							</td><td align="center" valign="top" headers="idm45897149156256">
 							<p>
 								Quay:<br/> 13 cores<br/> 56GB RAM<br/><br/> Clair:<br/> 2 cores<br/> 4 GB RAM
 							</p>
@@ -1024,7 +1024,7 @@
 					Webhooks, OAuth
 				</li><li class="listitem">
 					Robot Accounts
-				</li></ul></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm46573176374672"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+				</li></ul></div></section><div><div xml:lang="en-US" class="legalnotice" id="idm45897149668208"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2022 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
