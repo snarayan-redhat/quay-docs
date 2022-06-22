@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Release Notes</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Release Notes"/><link rel="next" href="#idm46554069059040" title="Preface"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46554067150464"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Release Notes</h1></div><div><h2 class="subtitle">Red Hat Quay</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm46554065708976">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Release Notes</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Release Notes"/><link rel="next" href="#idm45737918290384" title="Preface"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm45737918079744"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Release Notes</h1></div><div><h2 class="subtitle">Red Hat Quay</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm45737914114736">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Red Hat Quay Release Notes
-			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="preface"><a href="#idm46554069059040">Preface</a></span></li></ul></div><section class="preface" id="idm46554069059040"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
+			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="preface"><a href="#idm45737918290384">Preface</a></span></li></ul></div><section class="preface" id="idm45737918290384"><div class="titlepage"><div><div><h1 class="title">Preface</h1></div></div></div><p>
 			Red Hat Quay is regularly released, containing new features, bug fixes, and software updates. We highly recommend deploying the latest version of Red Hat Quay.
 		</p><p>
 			For Red Hat Quay documentation, you should know that:
@@ -16,7 +16,29 @@
 					Documentation versions prior to 2.9.2 are archived on the <a class="link" href="https://coreos.com/quay-enterprise/docs/latest/">CoreOS</a> site
 				</li></ul></div><p>
 			Red Hat Quay, version 3 is the latest major version.
-		</p></section><section class="section" id="rn-3-701"><div class="titlepage"><div><div><h2 class="title">1. Version 3.7.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder"><div class="titlepage"><div><div><h3 class="title">1.1. quay / clair / quay-builder</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+		</p></section><section class="section" id="rn-3-702"><div class="titlepage"><div><div><h2 class="title">1. Version 3.7.2</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3901">PROJQUAY-3901</a>. Clair 4.4.2 failed to fetch image layer from quay when image was from dockerhub
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3905">PROJQUAY-3905</a>. Quay 3.7.1 can’t reconfig quota to replace system quota for super user account
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3802">PROJQUAY-3802</a>. Quay 3.7.0 image vulnerability reported by Redhat ACS
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1605">PROJQUAY-1605</a>. Quay 3.4 SMTP validation fails
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3879">PROJQUAY-3879</a>. The Quay Config Tool is not validating configurations for Github Enterprise Login
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3948">PROJQUAY-3948</a>. Show how to pull an image with podman
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3767">PROJQUAY-3767</a>. Quay 3.7.0 can’t reconfig Quota to replace system default quota for user account
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3806">PROJQUAY-3806</a>. Cannot pull from proxy org as non-admin member
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3889">PROJQUAY-3889</a>. Quay quota consumption is not decreased in org level and image repo level after deleted image tags
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3920">PROJQUAY-3920</a>. Quay 3.7.1 can’t config quota for normal user accounts by super user
+				</li><li class="listitem">
+					<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3614">PROJQUAY-3614</a>. The 'build successfully completed' does not send out notification by email, slack and UI notification
+				</li></ul></div></section><section class="section" id="rn-3-701"><div class="titlepage"><div><div><h2 class="title">2. Version 3.7.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder"><div class="titlepage"><div><div><h3 class="title">2.1. quay / clair / quay-builder</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3841">PROJQUAY-3841</a>. Standalone UI Version is incorrect
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2346">PROJQUAY-2346</a>. Pushing failure of first attempt to create non-existing org or repository by skopeo and podman
@@ -30,7 +52,7 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3828">PROJQUAY-3828</a>. Quay 3.7.0 quota consumption is not correct in image repo level when removed all tags
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3881">PROJQUAY-3881</a>. cert_install.sh script incorrectly parses certificates in certain situations
-					</li></ul></div></section></section><section class="section" id="rn-3-700"><div class="titlepage"><div><div><h2 class="title">2. Version 3.7.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_2"><div class="titlepage"><div><div><h3 class="title">2.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-700"><div class="titlepage"><div><div><h2 class="title">3. Version 3.7.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_2"><div class="titlepage"><div><div><h3 class="title">3.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						With Red Hat Quay 3.7, users have the ability to report storage consumption and to contain registry growth by establishing configured storage quota limits. With this feature, organizations can easily avoid exceeding storage limitations by rejecting pulls at a specified limit. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-302">PROJQUAY-302</a>, <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-253">PROJQUAY-253</a>)
@@ -62,7 +84,7 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2560">PROJQUAY-2560</a>. The Quay Config Tool is not validating configurations for Github Enterprise Login.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3656">PROJQUAY-3656</a>. Could not verify GitHub OAuth credentials.
-					</li></ul></div></section><section class="section" id="quay_operator"><div class="titlepage"><div><div><h3 class="title">2.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator"><div class="titlepage"><div><div><h3 class="title">3.2. quay-operator</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
 						Advanced Clair configuration is now available for Red Hat Quay 3.7. The following features are now available to Quay administrators on the Quay Operator:
@@ -82,133 +104,133 @@
 						Geo-replication is now available with the Red Hat Quay Operator. This feature allows multiple, geographically distributed Quay deployments to work as a single registry from the perspective of a client or user. It significantly improves push and pull performance in a globally-distributed Quay setup. Image data is asynchronously replicated in the background with transparent failover / redirect for clients. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2504">PROJQUAY-2504</a>)
 					</li><li class="listitem">
 						With Red Hat Quay 3.7, reconfiguring Quay through the UI no longer generates a new login password. The password now generates only once, and remains the same after reconciling <code class="literal">QuayRegistry</code> objects. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3318">PROJQUAY-3318</a>)
-					</li></ul></div></section><section class="section" id="red_hat_quay_feature_tracker"><div class="titlepage"><div><div><h3 class="title">2.3. Red Hat Quay feature tracker</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="red_hat_quay_feature_tracker"><div class="titlepage"><div><div><h3 class="title">3.3. Red Hat Quay feature tracker</h3></div></div></div><p>
 				New features have been added to Red Hat Quay, some of which are currently in Technology Preview. Technology Preview features are experimental features and are not intended for production use.
 			</p><p>
 				Some features available in previous releases have been deprecated or removed. Deprecated functionality is still included in Red Hat Quay, but is planned for removal in a future release and is not recommended for new deployments. For the most recent list of deprecated and removed functionality in Red Hat Quay, refer to the table below. Additional details for more fine-grained functionality that has been deprecated and removed are listed after the table.
-			</p><div class="table" id="idm46554069171632"><p class="title"><strong>Table 1. Technology Preview tracker</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 66%; " class="col_1"/><col style="width: 17%; " class="col_2"/><col style="width: 17%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46554069107952" scope="col">Feature</th><th align="left" valign="top" id="idm46554069106864" scope="col">Quay 3.7</th><th align="left" valign="top" id="idm46554069105776" scope="col">Quay 3.6</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46554069107952">
+			</p><div class="table" id="idm45737917991248"><p class="title"><strong>Table 1. Technology Preview tracker</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 66%; " class="col_1"/><col style="width: 17%; " class="col_2"/><col style="width: 17%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm45737918573200" scope="col">Feature</th><th align="left" valign="top" id="idm45737918572112" scope="col">Quay 3.7</th><th align="left" valign="top" id="idm45737918571024" scope="col">Quay 3.6</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com//documentation/en-us/red_hat_quay/3.7/html-single/use_red_hat_quay#red-hat-quay-quota-management-and-enforcement">Quota management and enforcement</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/use_red_hat_quay#red-hat-quay-builders-enhancement">Red Hat Quay build enhancements</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/use_red_hat_quay#quay-as-cache-proxy">Red Hat Quay as proxy cache for upstream registries</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								Technology Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/deploy_red_hat_quay_on_openshift_with_the_quay_operator/index">Geo-replication - Red Hat Quay Operator</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/manage_red_hat_quay#unmanaged_clair_configuration">Advanced Clair configuration</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								Support for Microsoft Azure Government (MAG)
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								-
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/configure_red_hat_quay/index#config-fields-helm-oci">FEATURE_HELM_OCI_SUPPORT</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								Deprecated
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								Deprecated
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/configure_red_hat_quay/index#config-ui-database">MySQL and MariaDB database support</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								Deprecated
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								Deprecated
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/use_red_hat_quay/index#oci-intro">Open Container Initiative (OCI) Media types</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								General Availability
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								General Availability
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554069107952">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737918573200">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/manage_red_hat_quay#clair_crda_configuration">Java scanning with Clair</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069106864">
+							</td><td align="left" valign="top" headers="idm45737918572112">
 							<p>
 								Technology Preview
 							</p>
-							</td><td align="left" valign="top" headers="idm46554069105776">
+							</td><td align="left" valign="top" headers="idm45737918571024">
 							<p>
 								Technology Preview
 							</p>
-							</td></tr></tbody></table></div></div></section></section><section class="section" id="rns-3-607"><div class="titlepage"><div><div><h2 class="title">3. Version 3.6.7</h2></div></div></div><section class="section" id="quay_clair_quay_builder_3"><div class="titlepage"><div><div><h3 class="title">3.1. quay / clair / quay-builder</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							</td></tr></tbody></table></div></div></section></section><section class="section" id="rns-3-607"><div class="titlepage"><div><div><h2 class="title">4. Version 3.6.7</h2></div></div></div><section class="section" id="quay_clair_quay_builder_3"><div class="titlepage"><div><div><h3 class="title">4.1. quay / clair / quay-builder</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3812">PROJQUAY-3812</a>. [3.6] Failed to create non-existing repository in user account namespace by image pushing
-					</li></ul></div></section></section><section class="section" id="rns-3-606"><div class="titlepage"><div><div><h2 class="title">4. Version 3.6.6</h2></div></div></div><section class="section" id="quay_clair_quay_builder_4"><div class="titlepage"><div><div><h3 class="title">4.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rns-3-606"><div class="titlepage"><div><div><h2 class="title">5. Version 3.6.6</h2></div></div></div><section class="section" id="quay_clair_quay_builder_4"><div class="titlepage"><div><div><h3 class="title">5.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3146">PROJQUAY-3146</a>. Strange partial deletion of mirrored tags.
@@ -218,7 +240,7 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3405">PROJQUAY-3405</a>. Build "copy Logs" doesn’t work.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3638">PROJQUAY-3638</a>. Quay config validator crashes on 3.6.5 startup.
-					</li></ul></div></section></section><section class="section" id="rns-3-605"><div class="titlepage"><div><div><h2 class="title">5. Version 3.6.5</h2></div></div></div><section class="section" id="quay_clair_quay_builder_5"><div class="titlepage"><div><div><h3 class="title">5.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rns-3-605"><div class="titlepage"><div><div><h2 class="title">6. Version 3.6.5</h2></div></div></div><section class="section" id="quay_clair_quay_builder_5"><div class="titlepage"><div><div><h3 class="title">6.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2983">PROJQUAY-2983</a>. Config validation fails if no AWS access keys are provided ver. 2.
@@ -228,15 +250,15 @@
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3421">PROJQUAY-3421</a>. Bump Clair to 4.4.
-					</li></ul></div></section><section class="section" id="quay_operator_2"><div class="titlepage"><div><div><h3 class="title">5.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_2"><div class="titlepage"><div><div><h3 class="title">6.2. quay-operator</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3444">PROJQUAY-3444</a>. Adds subscription annotation to CSVs.
-					</li></ul></div></section></section><section class="section" id="rn-3-604"><div class="titlepage"><div><div><h2 class="title">6. Version 3.6.4</h2></div></div></div><section class="section" id="quay_operator_3"><div class="titlepage"><div><div><h3 class="title">6.1. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-604"><div class="titlepage"><div><div><h2 class="title">7. Version 3.6.4</h2></div></div></div><section class="section" id="quay_operator_3"><div class="titlepage"><div><div><h3 class="title">7.1. quay-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-3317">PROJQUAY-3317</a>. Quay 3.6.3 APP POD was crashed when use unmanaged tls component.
-					</li></ul></div></section></section><section class="section" id="rn-3-603"><div class="titlepage"><div><div><h2 class="title">7. Version 3.6.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_6"><div class="titlepage"><div><div><h3 class="title">7.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-603"><div class="titlepage"><div><div><h2 class="title">8. Version 3.6.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_6"><div class="titlepage"><div><div><h3 class="title">8.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2080">PROJQUAY-2080</a>. Quay failed to delete new team with 400 error code when the team role is Admin.
@@ -254,7 +276,7 @@
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2989">PROJQUAY-2989</a>. Bump LDAP 3.2.0 to 3.4.0.
-					</li></ul></div></section><section class="section" id="quay_operator_4"><div class="titlepage"><div><div><h3 class="title">7.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_4"><div class="titlepage"><div><div><h3 class="title">8.2. quay-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2049">PROJQUAY-2049</a>. When routes are not managed a config editor endpoint is still propagated in status.
@@ -284,13 +306,13 @@
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2973">PROJQUAY-2973</a>. Bump github.com/ulikunitz/xz dependency.
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators"><div class="titlepage"><div><div><h3 class="title">7.3. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators"><div class="titlepage"><div><div><h3 class="title">8.3. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2732">PROJQUAY-2732</a>. Faster creation of resources and permissions.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2898">PROJQUAY-2898</a>. Review QBO - Issue with BuildConfig being mutated incorrectly.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2984">PROJQUAY-2984</a>. Change label/selector on QBO pod and service.
-					</li></ul></div></section></section><section class="section" id="rn-3-602"><div class="titlepage"><div><div><h2 class="title">8. Version 3.6.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_7"><div class="titlepage"><div><div><h3 class="title">8.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-602"><div class="titlepage"><div><div><h2 class="title">9. Version 3.6.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_7"><div class="titlepage"><div><div><h3 class="title">9.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2416">PROJQUAY-2416</a>. Builder jobs not completing and timing out after 3 minutes of inactivity.
@@ -298,7 +320,7 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2313">PROJQUAY-2313</a>. Quay is using more storage than other registries on s3.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2681">PROJQUAY-2681</a>. Quay 3.6.0 registry title was not changed after changes with the config editor.
-					</li></ul></div></section><section class="section" id="quay_operator_5"><div class="titlepage"><div><div><h3 class="title">8.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_5"><div class="titlepage"><div><div><h3 class="title">9.2. quay-operator</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						As of Red Hat Quay v3.6.2, you can specify the desired size of storage resources provisioned for managed components. <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1090">PROJQUAY-1090</a>.
@@ -308,11 +330,11 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2930">PROJQUAY-2930</a>. Quay Operator unable to reconcile when specified the PVC volume size of Clair PostgreSQL DB.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2824">PROJQUAY-2824</a>. Upgrades to 3.6.1 are broken in OpenShift 4.6
-					</li></ul></div></section><section class="section" id="quay_container_security_operator"><div class="titlepage"><div><div><h3 class="title">8.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_container_security_operator"><div class="titlepage"><div><div><h3 class="title">9.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2928">PROJQUAY-2928</a>. CSO shows the wrong title in Operator Hub.
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators_2"><div class="titlepage"><div><div><h3 class="title">8.4. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators_2"><div class="titlepage"><div><div><h3 class="title">9.4. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2797">PROJQUAY-2797</a>. Quay Bridge Operator prevents deletion of builds.
-					</li></ul></div></section></section><section class="section" id="rn-3-601"><div class="titlepage"><div><div><h2 class="title">9. Version 3.6.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_8"><div class="titlepage"><div><div><h3 class="title">9.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-601"><div class="titlepage"><div><div><h2 class="title">10. Version 3.6.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_8"><div class="titlepage"><div><div><h3 class="title">10.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1936">PROJQUAY-1936</a>. Quay Operator reports wrong hostname in registryEndpoint status field for custom hostnames.
@@ -334,7 +356,7 @@
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2541">PROJQUAY-2541</a>. Enrichment data visibility fix on Quay UI.
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2636">PROJQUAY-2636</a>. Operator communicates healthy status per managed component.
-					</li></ul></div></section></section><section class="section" id="rn-3-600"><div class="titlepage"><div><div><h2 class="title">10. Version 3.6.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_9"><div class="titlepage"><div><div><h3 class="title">10.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-600"><div class="titlepage"><div><div><h2 class="title">11. Version 3.6.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_9"><div class="titlepage"><div><div><h3 class="title">11.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
 						Red Hat Quay 3.6 now includes support for the following Open Container Initiative (OCI) image media types by default: CLI cosigning, Helm, and the ztsd compression scheme. Other OCI media types can be configured by the user in their config.yaml file, for example:
@@ -423,51 +445,51 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2200">PROJQUAY-2200</a>. Quay Config editor need to support sslmode=verify-full in config.yaml after uploading database SSL Cert
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2185">PROJQUAY-2185</a>. Quay CR modified after making changes via the config tool
-					</li></ul></div></section><section class="section" id="red_hat_quay_feature_tracker_2"><div class="titlepage"><div><div><h3 class="title">10.2. Red Hat Quay feature tracker</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="red_hat_quay_feature_tracker_2"><div class="titlepage"><div><div><h3 class="title">11.2. Red Hat Quay feature tracker</h3></div></div></div><p>
 				New features have been added to Red Hat Quay, some of which are currently in Technology Preview. Technology Preview features are experimental features and are not intended for production use.
 			</p><p>
 				Some features available in previous releases have been deprecated or removed. Deprecated functionality is still included in Red Hat Quay, but is planned for removal in a future release and is not recommended for new deployments. For the most recent list of deprecated and removed functionality in Red Hat Quay, refer to the table below. Additional details for more fine-grained functionality that has been deprecated and removed are listed after the table.
-			</p><div class="table" id="idm46554068915760"><p class="title"><strong>Table 2. Technology Preview tracker</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46554068910960" scope="col">Feature</th><th align="left" valign="top" id="idm46554068909872" scope="col">Quay 3.6</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46554068910960">
+			</p><div class="table" id="idm45737910894480"><p class="title"><strong>Table 2. Technology Preview tracker</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm45737914293360" scope="col">Feature</th><th align="left" valign="top" id="idm45737914292272" scope="col">Quay 3.6</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm45737914293360">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/configure_red_hat_quay/index#config-fields-helm-oci">FEATURE_HELM_OCI_SUPPORT</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554068909872">
+							</td><td align="left" valign="top" headers="idm45737914292272">
 							<p>
 								Deprecated
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554068910960">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737914293360">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/configure_red_hat_quay/index#config-ui-database">MySQL and MariaDB database support</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554068909872">
+							</td><td align="left" valign="top" headers="idm45737914292272">
 							<p>
 								Deprecated
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554068910960">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737914293360">
 							<p>
 								<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/use_red_hat_quay/index#oci-intro">Open Container Initiative (OCI) Media types</a>
 							</p>
-							</td><td align="left" valign="top" headers="idm46554068909872">
+							</td><td align="left" valign="top" headers="idm45737914292272">
 							<p>
 								General Availability
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46554068910960">
+							</td></tr><tr><td align="left" valign="top" headers="idm45737914293360">
 							<p>
 								Java scanning with Clair
 							</p>
-							</td><td align="left" valign="top" headers="idm46554068909872">
+							</td><td align="left" valign="top" headers="idm45737914292272">
 							<p>
 								Technology Preview
 							</p>
-							</td></tr></tbody></table></div></div><section class="section" id="deprecated_features"><div class="titlepage"><div><div><h4 class="title">10.2.1. Deprecated features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+							</td></tr></tbody></table></div></div><section class="section" id="deprecated_features"><div class="titlepage"><div><div><h4 class="title">11.2.1. Deprecated features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							<span class="strong strong"><strong>FEATURE_HELM_OCI_SUPPORT</strong></span>: This option has been deprecated and will be removed in a future version of Red Hat Quay. In Red Hat Quay 3.6, Helm artifacts are supported by default and included under the <code class="literal">FEATURE_GENERAL_OCI_SUPPORT</code> property. Users are no longer required to update their config.yaml files to enable support. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2334">PROJQUAY-2334</a>)
 						</li><li class="listitem">
 							<span class="strong strong"><strong>MySQL and MariaDB database support</strong></span>: The MySQL and mariaDB databases have been deprecated as of Red Hat Quay 3.6. Support for these databases will be removed in a future version of Red Hat Quay. If starting a new Red Hat Quay installation, it is strongly recommended to use PostgreSQL. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1998">PROJQUAY-1998</a>)
-						</li></ul></div></section><section class="section" id="technology_preview_features"><div class="titlepage"><div><div><h4 class="title">10.2.2. Technology preview features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+						</li></ul></div></section><section class="section" id="technology_preview_features"><div class="titlepage"><div><div><h4 class="title">11.2.2. Technology preview features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
 							<span class="strong strong"><strong>Java scanning with Clair</strong></span>: With {product-title} 3.6, Clair 4.2 include support for Java scanning. Java scanning is dependent on an external service (CRDA) to gather vulnerability data. Because Clair is using a shared default token to access the CRDA service, it might encounter rate limiting if too many requests are made in a short period of time. Because of this, Clair might miss certain vulnerabilities, for example, log4j.
 						</p><p class="simpara">
 							Customers can obtain and use their own token for CRDA which might help avoid the occurrence of rate limiting by submitting <a class="link" href="https://developers.redhat.com/content-gateway/link/3872178">the API key request form</a>. Because of these issues, Java scanning for Clair is considered Technical Preview and will be enhanced in future Quay updates.
-						</p></li></ul></div></section></section><section class="section" id="quay_operator_6"><div class="titlepage"><div><div><h3 class="title">10.3. quay-operator</h3></div></div></div><p id="operator-added-changed">
+						</p></li></ul></div></section></section><section class="section" id="quay_operator_6"><div class="titlepage"><div><div><h3 class="title">11.3. quay-operator</h3></div></div></div><p id="operator-added-changed">
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
 						Red Hat Quay 3.6 adds a <code class="literal">disconnected</code> annotation to Operators. For example:
@@ -513,9 +535,9 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2068">PROJQUAY-2068</a>. Operator doesn’t check for deployment failures
 					</li><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2121">PROJQUAY-2121</a>. Quay upgrade pods running all workers instead of just database upgrade
-					</li></ul></div></section><section class="section" id="quay_container_security_operator_2"><div class="titlepage"><div><div><h3 class="title">10.4. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_container_security_operator_2"><div class="titlepage"><div><div><h3 class="title">11.4. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						The Operator Lifecycle Manager now supports the new v1 CRD API, <code class="literal">apiextensions.k8s.io.v1.CustomResourceDefinition</code> for the Container Security Operator. This CRD should be used instead of the <code class="literal">v1beta1</code> CRD, which has been deprecated as of OpenShift Container Platform 4.9. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-613">PROJQUAY-613</a>), (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1791">PROJQUAY-1791</a>)
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators_3"><div class="titlepage"><div><div><h3 class="title">10.5. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operators_3"><div class="titlepage"><div><div><h3 class="title">11.5. quay-openshift-bridge-operators</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p class="simpara">
 						The installation experience for the Quay Bridge Operator (QBO) has been improved. Enhancements include the following:
 					</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
 								<code class="literal">MutatingAdmissionWebhook</code> is created automatically during install.
@@ -527,17 +549,17 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 								For more information, see <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-672">PROJQUAY-672</a>.
 							</p></li></ul></div></li><li class="listitem">
 						The certificate manager is now delegated by the Operator Lifecycle Manager. Certificates can now be valid for more than 65 days. (<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1062">PROJQUAY-1062</a>)
-					</li></ul></div></section></section><section class="section" id="rn-3-507"><div class="titlepage"><div><div><h2 class="title">11. Version 3.5.7</h2></div></div></div><section class="section" id="quay_clair_quay_builders"><div class="titlepage"><div><div><h3 class="title">11.1. quay / clair / quay-builders</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-507"><div class="titlepage"><div><div><h2 class="title">12. Version 3.5.7</h2></div></div></div><section class="section" id="quay_clair_quay_builders"><div class="titlepage"><div><div><h3 class="title">12.1. quay / clair / quay-builders</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						CVE-2021-3762 quay-clair-container: quay/claircore: directory traversal when scanning crafted container image layer allows for arbitrary file write <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2486">PROJQUAY-2486</a>
-					</li></ul></div></section><section class="section" id="quay_operator_quay_container_security_operator_quay_openshift_bridge_operator"><div class="titlepage"><div><div><h3 class="title">11.2. quay-operator / quay-container-security-operator / quay-openshift-bridge-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_operator_quay_container_security_operator_quay_openshift_bridge_operator"><div class="titlepage"><div><div><h3 class="title">12.2. quay-operator / quay-container-security-operator / quay-openshift-bridge-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Update downstream operator extensions api to "v1" for 3.5 <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2480">PROJQUAY-2480</a>
-					</li></ul></div></section></section><section class="section" id="rn-3-506"><div class="titlepage"><div><div><h2 class="title">12. Version 3.5.6</h2></div></div></div><section class="section" id="quay_clair_quay_builders_2"><div class="titlepage"><div><div><h3 class="title">12.1. quay / clair / quay-builders</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-506"><div class="titlepage"><div><div><h2 class="title">13. Version 3.5.6</h2></div></div></div><section class="section" id="quay_clair_quay_builders_2"><div class="titlepage"><div><div><h3 class="title">13.1. quay / clair / quay-builders</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						rpm: package scanner leaks extracted layers <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2315">PROJQUAY-2315</a>
-					</li></ul></div></section></section><section class="section" id="rn-3-505"><div class="titlepage"><div><div><h2 class="title">13. Version 3.5.5</h2></div></div></div><section class="section" id="quay_clair_quay_builders_3"><div class="titlepage"><div><div><h3 class="title">13.1. quay / clair / quay-builders</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-505"><div class="titlepage"><div><div><h2 class="title">14. Version 3.5.5</h2></div></div></div><section class="section" id="quay_clair_quay_builders_3"><div class="titlepage"><div><div><h3 class="title">14.1. quay / clair / quay-builders</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Disable storing signatures during repo mirroring <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2312">PROJQUAY-2312</a>
@@ -549,11 +571,11 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Fixed backfill replication script relies on Image table <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2273">PROJQUAY-2273</a>
 					</li><li class="listitem">
 						Quay builders honor proxy environment variables <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2147">PROJQUAY-2147</a>
-					</li></ul></div></section></section><section class="section" id="rn-3-504"><div class="titlepage"><div><div><h2 class="title">14. Version 3.5.4</h2></div></div></div><section class="section" id="quay_clair_quay_builders_4"><div class="titlepage"><div><div><h3 class="title">14.1. quay / clair / quay-builders</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-504"><div class="titlepage"><div><div><h2 class="title">15. Version 3.5.4</h2></div></div></div><section class="section" id="quay_clair_quay_builders_4"><div class="titlepage"><div><div><h3 class="title">15.1. quay / clair / quay-builders</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Clair scan throwing 400 bad request
-					</li></ul></div></section></section><section class="section" id="rn-3-503"><div class="titlepage"><div><div><h2 class="title">15. Version 3.5.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_10"><div class="titlepage"><div><div><h3 class="title">15.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-503"><div class="titlepage"><div><div><h2 class="title">16. Version 3.5.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_10"><div class="titlepage"><div><div><h3 class="title">16.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay config validation fails on PostgreSQL 11 backed by SSL
@@ -565,9 +587,9 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Quay repository mirroring fixed
 					</li><li class="listitem">
 						Quay config validation crash on startup
-					</li></ul></div></section><section class="section" id="quay_operator_7"><div class="titlepage"><div><div><h3 class="title">15.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_operator_7"><div class="titlepage"><div><div><h3 class="title">16.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay operator upgrade pods running all workers instead of just database upgrade
-					</li></ul></div></section></section><section class="section" id="rn-3-502"><div class="titlepage"><div><div><h2 class="title">16. Version 3.5.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_11"><div class="titlepage"><div><div><h3 class="title">16.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-502"><div class="titlepage"><div><div><h2 class="title">17. Version 3.5.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_11"><div class="titlepage"><div><div><h3 class="title">17.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix config validation of LDAP server to prevent the server from timing out on large LDAP requests.
@@ -581,15 +603,15 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Fix quay to prevent creation of empty files in storage during multi-part upload.
 					</li><li class="listitem">
 						Fix clair to properly start in a disconnected environment.
-					</li></ul></div></section><section class="section" id="quay_operator_8"><div class="titlepage"><div><div><h3 class="title">16.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_8"><div class="titlepage"><div><div><h3 class="title">17.2. quay-operator</h3></div></div></div><p>
 				Known issues:
 			</p><p>
 				Geo-replication does not work when Quay is deployed on OpenShift using the Operator.
-			</p></section></section><section class="section" id="rn-3-501"><div class="titlepage"><div><div><h2 class="title">17. Version 3.5.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_12"><div class="titlepage"><div><div><h3 class="title">17.1. quay / clair / quay-builder</h3></div></div></div><p>
+			</p></section></section><section class="section" id="rn-3-501"><div class="titlepage"><div><div><h2 class="title">18. Version 3.5.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_12"><div class="titlepage"><div><div><h3 class="title">18.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><p>
 				Fix Clair "duplicate key value violates unique constraint" after upgrade <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1889">PROJQUAY-1889</a>
-			</p></section></section><section class="section" id="rn-3-500"><div class="titlepage"><div><div><h2 class="title">18. Version 3.5.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_13"><div class="titlepage"><div><div><h3 class="title">18.1. quay / clair / quay-builder</h3></div></div></div><p>
+			</p></section></section><section class="section" id="rn-3-500"><div class="titlepage"><div><div><h2 class="title">19. Version 3.5.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_13"><div class="titlepage"><div><div><h3 class="title">19.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Note:
 			</p><p>
 				Some features of Quay are not currently available when running on a FIPS-enabled OCP cluster or RHEL system:
@@ -655,7 +677,7 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Added support of github action to publish to a repository
 					</li><li class="listitem">
 						Document clair updater URLs
-					</li></ul></div></section><section class="section" id="quay_operator_9"><div class="titlepage"><div><div><h3 class="title">18.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_9"><div class="titlepage"><div><div><h3 class="title">19.2. quay-operator</h3></div></div></div><p>
 				Note: The new quay-operator OCP monitor dashboard requires that the operator be install in all namespaces (the default). If installed in a single namespace, the "monitoring" component will be unmanaged and not installed.
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Document using disconnected clair with quay-operator
@@ -665,17 +687,17 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Fix BUILDMAN_HOSTNAME in config bundle with managed route component
 					</li><li class="listitem">
 						Added OCP monitoring integration
-					</li></ul></div></section><section class="section" id="quay_container_security_operator_3"><div class="titlepage"><div><div><h3 class="title">18.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_container_security_operator_3"><div class="titlepage"><div><div><h3 class="title">19.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix reading security metadata when FEATURE_ANONYMOUS_ACCESS is set to false
-					</li></ul></div></section></section><section class="section" id="rn-3-407"><div class="titlepage"><div><div><h2 class="title">19. Version 3.4.7</h2></div></div></div><section class="section" id="quay_clair_quay_builder_14"><div class="titlepage"><div><div><h3 class="title">19.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-407"><div class="titlepage"><div><div><h2 class="title">20. Version 3.4.7</h2></div></div></div><section class="section" id="quay_clair_quay_builder_14"><div class="titlepage"><div><div><h3 class="title">20.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2479">PROJQUAY-2479</a>. Update downstream Operator extensions API to "v1" for 3.4.
-					</li></ul></div></section><section class="section" id="quay_operator_10"><div class="titlepage"><div><div><h3 class="title">19.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_10"><div class="titlepage"><div><div><h3 class="title">20.2. quay-operator</h3></div></div></div><p>
 				Known issues:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<a class="link" href="https://issues.redhat.com/browse/PROJQUAY-2921">PROJQUAY-2921</a>. Quay App route hostname is changed when upgrade from 3.4.7 to 3.6.2. As a result, you should avoid upgrading from v3.4.7 to v3.5.* or to v3.6.*.
-					</li></ul></div></section></section><section class="section" id="rn-3-406"><div class="titlepage"><div><div><h2 class="title">20. Version 3.4.6</h2></div></div></div><section class="section" id="quay_clair_quay_builder_15"><div class="titlepage"><div><div><h3 class="title">20.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-406"><div class="titlepage"><div><div><h2 class="title">21. Version 3.4.6</h2></div></div></div><section class="section" id="quay_clair_quay_builder_15"><div class="titlepage"><div><div><h3 class="title">21.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay config validation fails on PostgreSQL 11 backed by SSL
@@ -683,27 +705,27 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Quay config validation fails on SSL database connection on PostgreSQL 12 with SCRAM password authentication
 					</li><li class="listitem">
 						Quay config validation fails on Azure PostgreSQL DB with SSL
-					</li></ul></div></section><section class="section" id="quay_operator_11"><div class="titlepage"><div><div><h3 class="title">20.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_operator_11"><div class="titlepage"><div><div><h3 class="title">21.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay operator upgrade pods running all workers instead of just database upgrade
-					</li></ul></div></section></section><section class="section" id="rn-3-405"><div class="titlepage"><div><div><h2 class="title">21. Version 3.4.5</h2></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-405"><div class="titlepage"><div><div><h2 class="title">22. Version 3.4.5</h2></div></div></div><p>
 			Fixed:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Remove requirement to include Kubernetes internal service hostnames as SAN entries in user-provided TLS to fix upgrade from v3.3
-				</li></ul></div></section><section class="section" id="rn-3-404"><div class="titlepage"><div><div><h2 class="title">22. Version 3.4.4</h2></div></div></div><section class="section" id="quay_clair_quay_builder_16"><div class="titlepage"><div><div><h3 class="title">22.1. quay / clair / quay-builder</h3></div></div></div><p>
+				</li></ul></div></section><section class="section" id="rn-3-404"><div class="titlepage"><div><div><h2 class="title">23. Version 3.4.4</h2></div></div></div><section class="section" id="quay_clair_quay_builder_16"><div class="titlepage"><div><div><h3 class="title">23.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix Clair python recognize known vulnerabilities <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1775">PROJQUAY-1775</a>
-					</li></ul></div></section></section><section class="section" id="rn-3-403"><div class="titlepage"><div><div><h2 class="title">23. Version 3.4.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_17"><div class="titlepage"><div><div><h3 class="title">23.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-403"><div class="titlepage"><div><div><h2 class="title">24. Version 3.4.3</h2></div></div></div><section class="section" id="quay_clair_quay_builder_17"><div class="titlepage"><div><div><h3 class="title">24.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix Quay security scanning backfill API <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1613">PROJQUAY-1613</a>
 					</li><li class="listitem">
 						Fix Clair python language matching <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1692">PROJQUAY-1692</a>
-					</li></ul></div></section><section class="section" id="quay_operator_12"><div class="titlepage"><div><div><h3 class="title">23.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_12"><div class="titlepage"><div><div><h3 class="title">24.2. quay-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix Quay Operator handling of provided certificates related to BUILDMAN_HOSTNAME <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-1577">PROJQUAY-1577</a>
-					</li></ul></div></section></section><section class="section" id="rn-3-402"><div class="titlepage"><div><div><h2 class="title">24. Version 3.4.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_18"><div class="titlepage"><div><div><h3 class="title">24.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-402"><div class="titlepage"><div><div><h2 class="title">25. Version 3.4.2</h2></div></div></div><section class="section" id="quay_clair_quay_builder_18"><div class="titlepage"><div><div><h3 class="title">25.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix clair crash downloading RHEL content mapping
@@ -711,11 +733,11 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Quay config-tool validates SMTP
 					</li><li class="listitem">
 						Quay config-tool now prevents SECRET_KEY from changing on config updates
-					</li></ul></div></section><section class="section" id="quay_operator_13"><div class="titlepage"><div><div><h3 class="title">24.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_13"><div class="titlepage"><div><div><h3 class="title">25.2. quay-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Fix Quay Operator reconciler loop resulting in failed mirror configurations
-					</li></ul></div></section></section><section class="section" id="rn-3-401"><div class="titlepage"><div><div><h2 class="title">25. Version 3.4.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_19"><div class="titlepage"><div><div><h3 class="title">25.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-401"><div class="titlepage"><div><div><h2 class="title">26. Version 3.4.1</h2></div></div></div><section class="section" id="quay_clair_quay_builder_19"><div class="titlepage"><div><div><h3 class="title">26.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay config editor validates OIDC provider
@@ -723,21 +745,21 @@ ALLOWED_OCI_ARTIFACT_TYPES:
 						Quay config editor correctly validates MySQL database with SSL
 					</li><li class="listitem">
 						Quay config editor no longer requires Time Machine expiration when feature not enabled
-					</li></ul></div></section><section class="section" id="quay_operator_14"><div class="titlepage"><div><div><h3 class="title">25.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_14"><div class="titlepage"><div><div><h3 class="title">26.2. quay-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay Operator generates correct cert for build manager
 					</li><li class="listitem">
 						Quay Operator documentation link corrected to 3.4
-					</li></ul></div></section><section class="section" id="quay_container_security_operator_4"><div class="titlepage"><div><div><h3 class="title">25.3. quay-container-security-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_container_security_operator_4"><div class="titlepage"><div><div><h3 class="title">26.3. quay-container-security-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						<code class="literal">Quay</code> container Security Operator upgrade to 3.4.0
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator"><div class="titlepage"><div><div><h3 class="title">25.4. quay-openshift-bridge-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator"><div class="titlepage"><div><div><h3 class="title">26.4. quay-openshift-bridge-operator</h3></div></div></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Quay Bridge Operator upgrade to 3.4.0
-					</li></ul></div></section></section><section class="section" id="rn-3-400"><div class="titlepage"><div><div><h2 class="title">26. Version 3.4.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_20"><div class="titlepage"><div><div><h3 class="title">26.1. quay / clair / quay-builder</h3></div></div></div><p>
+					</li></ul></div></section></section><section class="section" id="rn-3-400"><div class="titlepage"><div><div><h2 class="title">27. Version 3.4.0</h2></div></div></div><section class="section" id="quay_clair_quay_builder_20"><div class="titlepage"><div><div><h3 class="title">27.1. quay / clair / quay-builder</h3></div></div></div><p>
 				Added/Changed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Clair V4 now GA and the default security scanner for Quay 3.4.0. New features include support for notifications and disconnected deployments.
@@ -893,7 +915,7 @@ FEATURE_HELM_OCI_SUPPORT: True</pre></li><li class="listitem">
 						PROJQUAY-1390 Quay login with Openstack Keystone user was failed
 					</li><li class="listitem">
 						Official Red Hat repositories may now contain "source" images which will be included in Mirrored repositories. See <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/building_running_and_managing_containers/index#getting-ubi-container-image-source-code_adding-software-to-a-running-ubi-container">Getting UBI Container Image Source Code</a> for an example of a source image tag. There is no simple way to exclude these source containers using Quay’s current tag patterns. This will be addressed in future Quay versions.
-					</li></ul></div></section><section class="section" id="quay_operator_15"><div class="titlepage"><div><div><h3 class="title">26.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_operator_15"><div class="titlepage"><div><div><h3 class="title">27.2. quay-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.5 or newer
 					</li></ul></div><p>
 				Added:
@@ -909,13 +931,13 @@ FEATURE_HELM_OCI_SUPPORT: True</pre></li><li class="listitem">
 						PROJQUAY-1056 Quay deployment was failed at setup DB on GCP when use GCP SQL Postgresql
 					</li><li class="listitem">
 						PROJQUAY-1394 Quay TNG Operator was failed to start managed postgresql database POD (operator upgrades may encounter this issue, recreating your QuayRegistry CR should resolve the issue)
-					</li></ul></div></section><section class="section" id="quay_container_security_operator_5"><div class="titlepage"><div><div><h3 class="title">26.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_container_security_operator_5"><div class="titlepage"><div><div><h3 class="title">27.3. quay-container-security-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.5 or newer
 					</li></ul></div><p>
 				Fixed:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						PROJQUAY-676 Wrong image vulnerabilities link in OCP4.4 Overview page
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator_2"><div class="titlepage"><div><div><h3 class="title">26.4. quay-openshift-bridge-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator_2"><div class="titlepage"><div><div><h3 class="title">27.4. quay-openshift-bridge-operator</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.5 or newer
 					</li></ul></div><p>
 				Fixed:
@@ -923,11 +945,11 @@ FEATURE_HELM_OCI_SUPPORT: True</pre></li><li class="listitem">
 						PROJQUAY-1225 bridge-operator update to go-1.15
 					</li></ul></div><p>
 				<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-400">Link to this Release</a>
-			</p></section></section><section class="section" id="rn-3-304"><div class="titlepage"><div><div><h2 class="title">27. Version 3.3.4</h2></div></div></div><p>
+			</p></section></section><section class="section" id="rn-3-304"><div class="titlepage"><div><div><h2 class="title">28. Version 3.3.4</h2></div></div></div><p>
 			Fixed:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					quay-bridge-operator references correct version
-				</li></ul></div></section><section class="section" id="rn-3-303"><div class="titlepage"><div><div><h2 class="title">28. Version 3.3.3</h2></div></div></div><p>
+				</li></ul></div></section><section class="section" id="rn-3-303"><div class="titlepage"><div><div><h2 class="title">29. Version 3.3.3</h2></div></div></div><p>
 			Fixed:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					clair-jwt: fixed NVD streams
@@ -935,9 +957,9 @@ FEATURE_HELM_OCI_SUPPORT: True</pre></li><li class="listitem">
 					CVE-2020-27831 quay: email notifications authorization bypass
 				</li><li class="listitem">
 					CVE-2020-27832 quay: persistent XSS in repository notification display
-				</li></ul></div></section><section class="section" id="rn-3-302"><div class="titlepage"><div><div><h2 class="title">29. Version 3.3.2</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+				</li></ul></div></section><section class="section" id="rn-3-302"><div class="titlepage"><div><div><h2 class="title">30. Version 3.3.2</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Version unreleased due to internal tooling issues
-				</li></ul></div></section><section class="section" id="rn-3-301"><div class="titlepage"><div><div><h2 class="title">30. Version 3.3.1</h2></div></div></div><p>
+				</li></ul></div></section><section class="section" id="rn-3-301"><div class="titlepage"><div><div><h2 class="title">31. Version 3.3.1</h2></div></div></div><p>
 			Release Date: August 20, 2020
 		</p><p>
 			Fixed:
@@ -949,7 +971,7 @@ FEATURE_HELM_OCI_SUPPORT: True</pre></li><li class="listitem">
 					Build triggers can disclose robot account names and existence of private repos within namespaces (CVE-2020-14313)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-301">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-300"><div class="titlepage"><div><div><h2 class="title">31. Version 3.3.0</h2></div></div></div><section class="section" id="quay_clair_jwt_quay_builder_clair"><div class="titlepage"><div><div><h3 class="title">31.1. quay / clair-jwt / quay-builder / clair</h3></div></div></div><p>
+		</p></section><section class="section" id="rn-3-300"><div class="titlepage"><div><div><h2 class="title">32. Version 3.3.0</h2></div></div></div><section class="section" id="quay_clair_jwt_quay_builder_clair"><div class="titlepage"><div><div><h3 class="title">32.1. quay / clair-jwt / quay-builder / clair</h3></div></div></div><p>
 				Added:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						(Tech Preview) New clair image available for non-production use (see docs)
@@ -1020,7 +1042,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 				Known Issues:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Containers running as repository mirrors may lock under certain conditions; restart the containers as needed.
-					</li></ul></div></section><section class="section" id="quay_operator_16"><div class="titlepage"><div><div><h3 class="title">31.2. quay-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_operator_16"><div class="titlepage"><div><div><h3 class="title">32.2. quay-operator</h3></div></div></div><p>
 				Note:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.2 or newer
@@ -1084,7 +1106,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 						Cloudfront cannot be properly configured using the CR. It can be managed using Quay’s configuration app.
 					</li><li class="listitem">
 						This version of the operator cannot be used for an automatic upgrade due to schema changes in the CR.
-					</li></ul></div></section><section class="section" id="quay_container_security_operator_6"><div class="titlepage"><div><div><h3 class="title">31.3. quay-container-security-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_container_security_operator_6"><div class="titlepage"><div><div><h3 class="title">32.3. quay-container-security-operator</h3></div></div></div><p>
 				Note:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.2 or newer
@@ -1092,7 +1114,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 				Added:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						View Quay Security Scanner image vulnerability information for images running in a cluster using the OpenShift UI
-					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator_3"><div class="titlepage"><div><div><h3 class="title">31.4. quay-openshift-bridge-operator</h3></div></div></div><p>
+					</li></ul></div></section><section class="section" id="quay_openshift_bridge_operator_3"><div class="titlepage"><div><div><h3 class="title">32.4. quay-openshift-bridge-operator</h3></div></div></div><p>
 				Note:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Only supported on OCP-4.2 or newer
@@ -1108,7 +1130,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 						Automatically import ImageStream tag once build completes
 					</li></ul></div><p>
 				<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-300">Link to this Release</a>
-			</p></section></section><section class="section" id="rn-3-202"><div class="titlepage"><div><div><h2 class="title">32. Version 3.2.2</h2></div></div></div><p>
+			</p></section></section><section class="section" id="rn-3-202"><div class="titlepage"><div><div><h2 class="title">33. Version 3.2.2</h2></div></div></div><p>
 			Release Date: April 27, 2020
 		</p><p>
 			Fixed:
@@ -1116,7 +1138,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 					Clair correctly downloads vulnerabilities even if one fails (see <a class="link" href="https://issues.redhat.com/browse/PROJQUAY-567">PROJQUAY-567</a>).
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-202">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-201"><div class="titlepage"><div><div><h2 class="title">33. Version 3.2.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-201"><div class="titlepage"><div><div><h2 class="title">34. Version 3.2.1</h2></div></div></div><p>
 			Release Date: February 10, 2020
 		</p><p>
 			Fixed:
@@ -1126,7 +1148,7 @@ FEATURE_EXPERIMENTAL_HELM_OCI_SUPPORT = True</pre></li></ul></div><p>
 					yarn: nodejs-yarn: Install functionality can be abused to generate arbitrary symlinks. (See <a class="link" href="https://access.redhat.com/security/cve/CVE-2019-10773">CVE-2019-10773</a>.)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-201">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-200"><div class="titlepage"><div><div><h2 class="title">34. Version 3.2.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-200"><div class="titlepage"><div><div><h2 class="title">35. Version 3.2.0</h2></div></div></div><p>
 			Release Date: December 17, 2019
 		</p><p>
 			Added:
@@ -1167,7 +1189,7 @@ Quay and support will be removed in the next major version.
 It is strongly suggested to have this flag enabled and to
 restrict access to V1 push.</pre></li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-200">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-103"><div class="titlepage"><div><div><h2 class="title">35. Version 3.1.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-103"><div class="titlepage"><div><div><h2 class="title">36. Version 3.1.3</h2></div></div></div><p>
 			Release Date: November 22, 2019
 		</p><p>
 			Fixed:
@@ -1175,7 +1197,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					NVD stopped publishing the XML feed, Clair now consumes JSON feed
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-103">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-102"><div class="titlepage"><div><div><h2 class="title">36. Version 3.1.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-102"><div class="titlepage"><div><div><h2 class="title">37. Version 3.1.2</h2></div></div></div><p>
 			Release Date: October 31, 2019
 		</p><p>
 			Fixed:
@@ -1193,7 +1215,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Security token for storage proxy properly URL encoded
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-102">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-101"><div class="titlepage"><div><div><h2 class="title">37. Version 3.1.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-101"><div class="titlepage"><div><div><h2 class="title">38. Version 3.1.1</h2></div></div></div><p>
 			Release Date: October 3, 2019
 		</p><p>
 			Fixed:
@@ -1211,7 +1233,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Updated SCL rh-nginx112 (related to CVE-2019-9511, CVE-2019-9513, CVE-2019-9516)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-101">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-100"><div class="titlepage"><div><div><h2 class="title">38. Version 3.1.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-100"><div class="titlepage"><div><div><h2 class="title">39. Version 3.1.0</h2></div></div></div><p>
 			Release Date: September 5, 2019
 		</p><p>
 			Added:
@@ -1253,7 +1275,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Repository mirror config has known issues when remote registry username or password has characters requiring special handling for shell commands. Specifically, the tokens for registry.redhat.io with a pipe (|) character in them are incorrectly escaped. Out of an abundance of caution, a fix for this will follow in a subsequent update.
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-100">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-005"><div class="titlepage"><div><div><h2 class="title">39. Version 3.0.5</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-005"><div class="titlepage"><div><div><h2 class="title">40. Version 3.0.5</h2></div></div></div><p>
 			Release Date: August 28, 2019
 		</p><p>
 			Added:
@@ -1269,7 +1291,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Config tool fails to set up database when password string contains "$"
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-005">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-004"><div class="titlepage"><div><div><h2 class="title">40. Version 3.0.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-004"><div class="titlepage"><div><div><h2 class="title">41. Version 3.0.4</h2></div></div></div><p>
 			Release Date: July 15, 2019
 		</p><p>
 			Fixed:
@@ -1285,7 +1307,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					nginx access and error logs now to stdout
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-004">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-003"><div class="titlepage"><div><div><h2 class="title">41. Version 3.0.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-003"><div class="titlepage"><div><div><h2 class="title">42. Version 3.0.3</h2></div></div></div><p>
 			Release Date: June 20, 2019
 		</p><p>
 			Fixed:
@@ -1299,7 +1321,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Exception when in OAuth approval flow
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-003">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-002"><div class="titlepage"><div><div><h2 class="title">42. Version 3.0.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-002"><div class="titlepage"><div><div><h2 class="title">43. Version 3.0.2</h2></div></div></div><p>
 			Release Date: May 20, 2019
 		</p><p>
 			Fixed:
@@ -1311,7 +1333,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					A flaw was found in the way the DES/3DES cipher was used as part of the TLS/SSL protocol. A man-in-the-middle attacker could use this flaw to recover some plaintext data by capturing large amounts of encrypted traffic between TLS/SSL server and client if the communication used a DES/3DES based ciphersuite. (CVE-2016-2183)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-002">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-001"><div class="titlepage"><div><div><h2 class="title">43. Version 3.0.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-001"><div class="titlepage"><div><div><h2 class="title">44. Version 3.0.1</h2></div></div></div><p>
 			Release Date: May 13, 2019
 		</p><p>
 			Fixed:
@@ -1319,23 +1341,23 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Health API endpoint (/health/instance) now correctly checks the internal port to verify all services.
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-001">Link to this Release</a>
-		</p></section><section class="section" id="rn-3-000"><div class="titlepage"><div><div><h2 class="title">44. Version 3.0.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-3-000"><div class="titlepage"><div><div><h2 class="title">45. Version 3.0.0</h2></div></div></div><p>
 			Release Date: May 1, 2019
 		</p><p>
 			Red Hat Quay V3 offers the following new features:
-		</p><section class="section" id="red_hat_quay_web_ui_configuration_tool"><div class="titlepage"><div><div><h3 class="title">44.1. Red Hat Quay Web UI configuration tool</h3></div></div></div><p>
+		</p><section class="section" id="red_hat_quay_web_ui_configuration_tool"><div class="titlepage"><div><div><h3 class="title">45.1. Red Hat Quay Web UI configuration tool</h3></div></div></div><p>
 				A new Red Hat Quay configuration tool option within the quay image lets you create Red Hat Quay configuration files before starting a Red Hat Quay installation. The result of the configuration tool is a tarball of Red Hat Quay configuration files. Using that tarball greatly simplifies multi-instance deployments. The tarball contains the config.yaml file, and any optional files such as an SSL certificate (ssl.cert) and SSL key (ssl.key).
 			</p><p>
 				Choosing between the two different configuration tool options, you can either create a configuration file from scratch or modify an existing set of configuration files. In both cases, after you create the configuration, you can carry the tarball to each machine in your new Red Hat Quay cluster or apply it on an OpenShift or other Kubernetes cluster to use it to actually deploy Red Hat Quay.
 			</p><p>
 				The new Red Hat Quay configuration tool greatly simplifies the deployment of Red Hat Quay on OpenShift and other Kubernetes platforms. Using this tool helps you automatically deploy changes to nodes and can trigger Kubernetes blue-grean deployments of Red Hat Quay containers for configuration updates.
-			</p></section><section class="section" id="support_for_windows_container_images"><div class="titlepage"><div><div><h3 class="title">44.2. Support for Windows Container Images</h3></div></div></div><p>
+			</p></section><section class="section" id="support_for_windows_container_images"><div class="titlepage"><div><div><h3 class="title">45.2. Support for Windows Container Images</h3></div></div></div><p>
 				Windows containers offer a way to run applications written for Microsoft Windows server platforms on container-enabled platforms, such as OpenShift and Kubernetes. By supporting Windows containers, Red Hat Quay V3 allows you to store your Windows containers in your Red Hat Quay registry using the same kinds of tools you use to push and pull your Linux containers.
-			</p></section><section class="section" id="multi_architecture_container_image_support"><div class="titlepage"><div><div><h3 class="title">44.3. Multi-Architecture Container Image Support</h3></div></div></div><p>
+			</p></section><section class="section" id="multi_architecture_container_image_support"><div class="titlepage"><div><div><h3 class="title">45.3. Multi-Architecture Container Image Support</h3></div></div></div><p>
 				Red Hat Quay V3 now supports multi-architecture container manifests. The Docker Registry API spec v2_s2 container specification supports multi-architecture containers by adding an architecture label to the image manifest. Having this field set for a particular architecture allows images of the same architecture type to be pushed to a Red Hat Quay repository and later automatically accessed from a Red Hat Quay repository, while still requesting generic names for containers. Supported architectures IBM Power LE and z System workloads, ARM based IoT devices and Windows-based workloads.
-			</p></section><section class="section" id="built_on_red_hat_enterprise_linux"><div class="titlepage"><div><div><h3 class="title">44.4. Built on Red Hat Enterprise Linux</h3></div></div></div><p>
+			</p></section><section class="section" id="built_on_red_hat_enterprise_linux"><div class="titlepage"><div><div><h3 class="title">45.4. Built on Red Hat Enterprise Linux</h3></div></div></div><p>
 				As part of the process of moving Red Hat Quay toward fully integrating into the Red Hat Product lineup, Red Hat Quay V3 is now delivered in a Red Hat Enterprise Linux 7.x container image. Moving Red Hat Quay into a RHEL container does not in any way change the interface or general functioning of the container, but simply allows Red Hat Quay to become better aligned with other Red Hat product offerings.
-			</p></section><section class="section" id="red_hat_quay_images_now_in_redhat_repo_on_quay_io"><div class="titlepage"><div><div><h3 class="title">44.5. Red Hat Quay images now in redhat repo on Quay.io</h3></div></div></div><p>
+			</p></section><section class="section" id="red_hat_quay_images_now_in_redhat_repo_on_quay_io"><div class="titlepage"><div><div><h3 class="title">45.5. Red Hat Quay images now in redhat repo on Quay.io</h3></div></div></div><p>
 				Red Hat Quay images formerly stores in the quay.io/coreos repository are moving to quay.io/redhat for Red Hat Quay version 3. Available images include:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						quay.io/redhat/quay
@@ -1347,7 +1369,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 				Earlier version of quay and quay-builder images will remain on quay.io/coreos. For example, quay.io/coreos/quay:v2.9.5.
 			</p><p>
 				Container Images based on RHEL inherit all certification and support features from RHEL. They can also take advantage of quickly leveraging security fixes and updates as they become available in RHEL.
-			</p></section><section class="section" id="changes_to_support_running_containers_in_unprivileged_mode"><div class="titlepage"><div><div><h3 class="title">44.6. Changes to support running containers in unprivileged mode</h3></div></div></div><p>
+			</p></section><section class="section" id="changes_to_support_running_containers_in_unprivileged_mode"><div class="titlepage"><div><div><h3 class="title">45.6. Changes to support running containers in unprivileged mode</h3></div></div></div><p>
 				Previous versions of images required running in privileged mode. To remove this restriction, container config and ports were changed.
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						clair-jwt config has moved from /config to /clair/config
@@ -1361,7 +1383,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 				The move to a RHEL base image means the certificate install path has changed to /etc/pki/ca-trust/source/anchors. Examples running the images have been updated to reflect this.
 			</p><p>
 				<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-3-000">Link to this Release</a>
-			</p></section></section><section class="section" id="rn-2-905"><div class="titlepage"><div><div><h2 class="title">45. Version 2.9.5</h2></div></div></div><p>
+			</p></section></section><section class="section" id="rn-2-905"><div class="titlepage"><div><div><h2 class="title">46. Version 2.9.5</h2></div></div></div><p>
 			Release Date: March 27, 2019
 		</p><p>
 			Added:
@@ -1373,7 +1395,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Prohibit DES TLS ciphers
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-905">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-904"><div class="titlepage"><div><div><h2 class="title">46. Version 2.9.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-904"><div class="titlepage"><div><div><h2 class="title">47. Version 2.9.4</h2></div></div></div><p>
 			Release Date: November 1, 2018
 		</p><p>
 			Fixed:
@@ -1381,7 +1403,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Georeplication under certain failure conditions would incorrectly mark storage as replicated (#3283)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-904">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-903"><div class="titlepage"><div><div><h2 class="title">47. Version 2.9.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-903"><div class="titlepage"><div><div><h2 class="title">48. Version 2.9.3</h2></div></div></div><p>
 			Release Date: July 24, 2018
 		</p><p>
 			Fixed:
@@ -1389,7 +1411,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Changed to using v4 of Gitlab API now that v3 has been deprecated and removed (#3110)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-903">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-902"><div class="titlepage"><div><div><h2 class="title">48. Version 2.9.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-902"><div class="titlepage"><div><div><h2 class="title">49. Version 2.9.2</h2></div></div></div><p>
 			Release Date: May 16, 2018
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release fixes a bug in which the deletion of namespaces did not result in the deletion of robot accounts under that namespace. While this is not a security issue (no permissions or credentials are leaked), it can appear unusual to users, so an upgrade is highly recommended. This change also includes a migration that cleans up the aforementioned robot accounts, so the migration step can take several minutes. Please plan accordingly.
@@ -1429,7 +1451,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Breakage in RECATPCHA support (#3065)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-902">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-901"><div class="titlepage"><div><div><h2 class="title">49. Version 2.9.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-901"><div class="titlepage"><div><div><h2 class="title">50. Version 2.9.1</h2></div></div></div><p>
 			Release Date: April 9, 2018
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release fixes the 2.9.0 migration. If you experienced an error during the 2.9.0 migration, manually rollback and then upgrade your quay instance to 2.9.1.
@@ -1441,7 +1463,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Overflow of repository grid UI (#3049)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-901">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-900"><div class="titlepage"><div><div><h2 class="title">50. Version 2.9.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-900"><div class="titlepage"><div><div><h2 class="title">51. Version 2.9.0</h2></div></div></div><p>
 			Release Date: April 3, 2018
 		</p><p>
 			Added:
@@ -1479,7 +1501,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					500 error when trying to pull certain images via torrent (#3036)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-900">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-800"><div class="titlepage"><div><div><h2 class="title">51. Version 2.8.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-800"><div class="titlepage"><div><div><h2 class="title">52. Version 2.8.0</h2></div></div></div><p>
 			Release Date: February 13, 2018
 		</p><p>
 			Added:
@@ -1523,7 +1545,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Warning bar should not be displayed for already expired application tokens (#3003)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-800">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-700"><div class="titlepage"><div><div><h2 class="title">52. Version 2.7.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-700"><div class="titlepage"><div><div><h2 class="title">53. Version 2.7.0</h2></div></div></div><p>
 			Release Date: January 8, 2018
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release removes support for the OIDC token internal authentication mechanism and replaces it with support for a new app-specific token system. All customers using the old OIDC token auth mechanism must change their configuration after updating manually in <code class="literal">config.yaml</code>.
@@ -1561,7 +1583,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Various small JavaScript security fixes
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-700">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-602"><div class="titlepage"><div><div><h2 class="title">53. Version 2.6.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-602"><div class="titlepage"><div><div><h2 class="title">54. Version 2.6.2</h2></div></div></div><p>
 			Release Date: December 19, 2017
 		</p><p>
 			Added:
@@ -1573,7 +1595,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Failure to register uploaded TLS certificates (#2946)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-602">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-601"><div class="titlepage"><div><div><h2 class="title">54. Version 2.6.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-601"><div class="titlepage"><div><div><h2 class="title">55. Version 2.6.1</h2></div></div></div><p>
 			Release Date: October 26, 2017
 		</p><p>
 			Added:
@@ -1595,7 +1617,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Broken health check for OIDC authentication (#2888)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-601">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-600"><div class="titlepage"><div><div><h2 class="title">55. Version 2.6.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-600"><div class="titlepage"><div><div><h2 class="title">56. Version 2.6.0</h2></div></div></div><p>
 			Release Date: October 10, 2017
 		</p><p>
 			Added:
@@ -1623,7 +1645,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					OIDC auth headers (#2695)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-600">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-500"><div class="titlepage"><div><div><h2 class="title">56. Version 2.5.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-500"><div class="titlepage"><div><div><h2 class="title">57. Version 2.5.0</h2></div></div></div><p>
 			Release Date: September 7, 2017
 		</p><p>
 			Added:
@@ -1651,7 +1673,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Purge repository on very large repositories
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-500">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-400"><div class="titlepage"><div><div><h2 class="title">57. Version 2.4.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-400"><div class="titlepage"><div><div><h2 class="title">58. Version 2.4.0</h2></div></div></div><p>
 			Release Date: July 10, 2017
 		</p><p>
 			Added:
@@ -1697,7 +1719,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Expensive database call in build badges (#2688)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-400">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-304"><div class="titlepage"><div><div><h2 class="title">58. Version 2.3.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-304"><div class="titlepage"><div><div><h2 class="title">59. Version 2.3.4</h2></div></div></div><p>
 			Release Date: May 3, 2017
 		</p><p>
 			Added:
@@ -1705,7 +1727,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Always show tag expiration options in superuser panel
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-304">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-303"><div class="titlepage"><div><div><h2 class="title">59. Version 2.3.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-303"><div class="titlepage"><div><div><h2 class="title">60. Version 2.3.3</h2></div></div></div><p>
 			Release Date: May 2, 2017
 		</p><p>
 			Added:
@@ -1725,7 +1747,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Failure in setup tool when time machine config is not set (#2589)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-303">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-302"><div class="titlepage"><div><div><h2 class="title">60. Version 2.3.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-302"><div class="titlepage"><div><div><h2 class="title">61. Version 2.3.2</h2></div></div></div><p>
 			Release Date: April 27, 2017
 		</p><p>
 			Added:
@@ -1751,7 +1773,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Ensure build logs archive lookup URL checks build permissions (#2578)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-302">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-301"><div class="titlepage"><div><div><h2 class="title">61. Version 2.3.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-301"><div class="titlepage"><div><div><h2 class="title">62. Version 2.3.1</h2></div></div></div><p>
 			Release Date: April 21, 2017
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release fixes the 2.3.0 migration. If you experienced an error during the 2.3.0 migration, manually rollback and then upgrade your quay instance to 2.3.1.
@@ -1761,7 +1783,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Specify default server value for new bool field added to the repository table
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-301">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-300"><div class="titlepage"><div><div><h2 class="title">62. Version 2.3.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-300"><div class="titlepage"><div><div><h2 class="title">63. Version 2.3.0</h2></div></div></div><p>
 			Release Date: April 20, 2017
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release has known issues, related to database migrations, and will not work for many customers. If you are using this release, upgrade your Quay cluster to 2.3.4 or later.
@@ -1807,7 +1829,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Errors when deleting repositories without security scanning enabled (#2554)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-300">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-200"><div class="titlepage"><div><div><h2 class="title">63. Version 2.2.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-200"><div class="titlepage"><div><div><h2 class="title">64. Version 2.2.0</h2></div></div></div><p>
 			Release Date: March 31, 2017
 		</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 				This release contains a migration that adds a new feature to the build system. This requires shutting down the entire cluster including builders and running one instance to migrate the database forward. You must use a v2.2.0 builder with a v2.2.0 Quay cluster.
@@ -1847,7 +1869,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Garbage Collection corner case (#2404)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-200">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-100"><div class="titlepage"><div><div><h2 class="title">64. Version 2.1.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-100"><div class="titlepage"><div><div><h2 class="title">65. Version 2.1.0</h2></div></div></div><p>
 			Release Date: February 22, 2017
 		</p><p>
 			<span class="strong strong"><strong>POSTGRESQL USERS</strong></span>: This release adds full-text searching capabilities to Quay Enterprise. In order to support this feature, the upgrade migration will attempt to create the <code class="literal">pg_trgm</code> extension in the database. This operation requires <span class="strong strong"><strong>superuser access</strong></span> to run, and requires the PostgreSQL Additional Modules to be installed. See <a class="link" href="https://coreos.com/quay-enterprise/docs/latest/postgres-additional-modules.html">https://coreos.com/quay-enterprise/docs/latest/postgres-additional-modules.html</a> to learn how to install the extensions.
@@ -1873,7 +1895,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					V1 search compatibility (#2344)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-100">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-005"><div class="titlepage"><div><div><h2 class="title">65. Version 2.0.5</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-005"><div class="titlepage"><div><div><h2 class="title">66. Version 2.0.5</h2></div></div></div><p>
 			Release Date: January 30, 2017
 		</p><p>
 			Added:
@@ -1885,7 +1907,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Support for wildcard certs in the superuser config panel
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-005">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-004"><div class="titlepage"><div><div><h2 class="title">66. Version 2.0.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-004"><div class="titlepage"><div><div><h2 class="title">67. Version 2.0.4</h2></div></div></div><p>
 			Release Date: January 26, 2017
 		</p><p>
 			Added:
@@ -1937,7 +1959,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Support for wildcard certs in the superuser config panel
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-004">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-003"><div class="titlepage"><div><div><h2 class="title">67. Version 2.0.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-003"><div class="titlepage"><div><div><h2 class="title">68. Version 2.0.3</h2></div></div></div><p>
 			Release Date: December 9, 2016
 		</p><p>
 			Added:
@@ -1957,7 +1979,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Fix user lookup for external auth engines (#2206)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-003">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-002"><div class="titlepage"><div><div><h2 class="title">68. Version 2.0.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-002"><div class="titlepage"><div><div><h2 class="title">69. Version 2.0.2</h2></div></div></div><p>
 			Release Date: December 2, 2016
 		</p><p>
 			Added:
@@ -2011,7 +2033,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					User lookup for external auth engines broken
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-002">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-001"><div class="titlepage"><div><div><h2 class="title">69. Version 2.0.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-001"><div class="titlepage"><div><div><h2 class="title">70. Version 2.0.1</h2></div></div></div><p>
 			Release Date: November 17, 2016
 		</p><p>
 			Added:
@@ -2079,7 +2101,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Superuser config panel cannot save
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-001">Link to this Release</a>
-		</p></section><section class="section" id="rn-2-000"><div class="titlepage"><div><div><h2 class="title">70. Version 2.0.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-2-000"><div class="titlepage"><div><div><h2 class="title">71. Version 2.0.0</h2></div></div></div><p>
 			Release Date: October 26, 2016
 		</p><p>
 			This release is a required release and must be run before attempting an upgrade to v2.0.0+.
@@ -2121,7 +2143,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Entity search broken under Postgres
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-2-000">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-181"><div class="titlepage"><div><div><h2 class="title">71. Version 1.18.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-181"><div class="titlepage"><div><div><h2 class="title">72. Version 1.18.1</h2></div></div></div><p>
 			Release Date: October 31, 2016
 		</p><p>
 			Fixed:
@@ -2129,7 +2151,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Exception when using RADOS GW Storage driver (#2057)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-181">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-180"><div class="titlepage"><div><div><h2 class="title">72. Version 1.18.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-180"><div class="titlepage"><div><div><h2 class="title">73. Version 1.18.0</h2></div></div></div><p>
 			Release Date: October 13, 2016
 		</p><p>
 			Changed:
@@ -2157,7 +2179,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Don’t exception log for expected 404s in Swift storage (#1851)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-180">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-171"><div class="titlepage"><div><div><h2 class="title">73. Version 1.17.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-171"><div class="titlepage"><div><div><h2 class="title">74. Version 1.17.1</h2></div></div></div><p>
 			Release Date: September 22, 2016
 		</p><p>
 			Changed:
@@ -2181,7 +2203,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Handling of custom LDAP cert (#1846)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-171">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-170"><div class="titlepage"><div><div><h2 class="title">74. Version 1.17.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-170"><div class="titlepage"><div><div><h2 class="title">75. Version 1.17.0</h2></div></div></div><p>
 			Release Date: September 12, 2016
 		</p><p>
 			Changed:
@@ -2237,7 +2259,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Database performance (#1680, #1688, #1690, #1722, #1744, #1772)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-170">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-166"><div class="titlepage"><div><div><h2 class="title">75. Version 1.16.6</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-166"><div class="titlepage"><div><div><h2 class="title">76. Version 1.16.6</h2></div></div></div><p>
 			Release Date: August 17, 2016
 		</p><p>
 			Changed:
@@ -2245,7 +2267,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Added ability to override secure cookie setting when using HTTPS protocol (#1712)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-166">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-165"><div class="titlepage"><div><div><h2 class="title">76. Version 1.16.5</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-165"><div class="titlepage"><div><div><h2 class="title">77. Version 1.16.5</h2></div></div></div><p>
 			Release Date: August 3, 2016
 		</p><p>
 			Changed:
@@ -2285,7 +2307,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Error raised on duplicate placements when replicating (#1633)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-165">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-164"><div class="titlepage"><div><div><h2 class="title">77. Version 1.16.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-164"><div class="titlepage"><div><div><h2 class="title">78. Version 1.16.4</h2></div></div></div><p>
 			Release Date: July 18, 2016
 		</p><p>
 			Changed:
@@ -2315,7 +2337,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Tutorial fails gracefully without Redis (#1587)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-164">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-163"><div class="titlepage"><div><div><h2 class="title">78. Version 1.16.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-163"><div class="titlepage"><div><div><h2 class="title">79. Version 1.16.3</h2></div></div></div><p>
 			Release Date: June 27, 2016
 		</p><p>
 			Changed:
@@ -2355,7 +2377,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Performance of database queries (#1512)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-163">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-162"><div class="titlepage"><div><div><h2 class="title">79. Version 1.16.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-162"><div class="titlepage"><div><div><h2 class="title">80. Version 1.16.2</h2></div></div></div><p>
 			Release Date: June 16, 2016
 		</p><p>
 			Changed:
@@ -2377,7 +2399,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Styles on Privacy and Terms of Service pages (#1531)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-162">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-161"><div class="titlepage"><div><div><h2 class="title">80. Version 1.16.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-161"><div class="titlepage"><div><div><h2 class="title">81. Version 1.16.1</h2></div></div></div><p>
 			Release Date: June 8, 2016
 		</p><p>
 			Changed:
@@ -2431,7 +2453,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Handling of admin OAuth Scope (#1447)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-161">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-160"><div class="titlepage"><div><div><h2 class="title">81. Version 1.16.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-160"><div class="titlepage"><div><div><h2 class="title">82. Version 1.16.0</h2></div></div></div><p>
 			Release Date: May 6, 2016
 		</p><p>
 			Changed:
@@ -2487,7 +2509,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Error when turning on receipt emails (#1209)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-160">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-155"><div class="titlepage"><div><div><h2 class="title">82. Version 1.15.5</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-155"><div class="titlepage"><div><div><h2 class="title">83. Version 1.15.5</h2></div></div></div><p>
 			Release Date: February 12, 2016
 		</p><p>
 			Fixed:
@@ -2495,7 +2517,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Docker pushes with v2 sha mismatch were breaking v2 functionality (#1236)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-155">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-154"><div class="titlepage"><div><div><h2 class="title">83. Version 1.15.4</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-154"><div class="titlepage"><div><div><h2 class="title">84. Version 1.15.4</h2></div></div></div><p>
 			Release Date: February 11, 2016
 		</p><p>
 			Changed:
@@ -2513,7 +2535,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Notification logo (#1223)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-154">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-153"><div class="titlepage"><div><div><h2 class="title">84. Version 1.15.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-153"><div class="titlepage"><div><div><h2 class="title">85. Version 1.15.3</h2></div></div></div><p>
 			Release Date: February 3, 2016
 		</p><p>
 			Changed:
@@ -2533,7 +2555,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Setup tool storage engine validation (#1194)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-153">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-152"><div class="titlepage"><div><div><h2 class="title">85. Version 1.15.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-152"><div class="titlepage"><div><div><h2 class="title">86. Version 1.15.2</h2></div></div></div><p>
 			Release Date: January 25, 2016
 		</p><p>
 			This release tracks changes in the Docker v2 image format and adds official support for library repositories.
@@ -2551,7 +2573,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Typos in docs (#1163, #1164)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-152">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-150"><div class="titlepage"><div><div><h2 class="title">86. Version 1.15.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-150"><div class="titlepage"><div><div><h2 class="title">87. Version 1.15.0</h2></div></div></div><p>
 			Release Date: January 12, 2016
 		</p><p>
 			This release repairs a bug in torrent hash calculations.
@@ -2561,7 +2583,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Fix torrent hash calculation (#1142)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-150">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-141"><div class="titlepage"><div><div><h2 class="title">87. Version 1.14.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-141"><div class="titlepage"><div><div><h2 class="title">88. Version 1.14.1</h2></div></div></div><p>
 			Release Date: January 6, 2016
 		</p><p>
 			This release is primarily to address a bug in a migration found in v.1.14.0 related to migrating v1 data to the new format for v2 in the database.
@@ -2593,7 +2615,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Fixed UI for dismissing notifications (#1094)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-141">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-140"><div class="titlepage"><div><div><h2 class="title">88. Version 1.14.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-140"><div class="titlepage"><div><div><h2 class="title">89. Version 1.14.0</h2></div></div></div><p>
 			Release Date: December 18, 2015
 		</p><p>
 			This new release introduces Docker Registry v2 support and makes Quay Enterprise fully backward and forward compatible with both v1 and v2. Push and pull your images securely with any version of Docker Engine (≥0.10) and enjoy the performance boost that registry v2 delivers.
@@ -2627,7 +2649,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Fixed numerous builder failures
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-140">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-133"><div class="titlepage"><div><div><h2 class="title">89. Version 1.13.3</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-133"><div class="titlepage"><div><div><h2 class="title">90. Version 1.13.3</h2></div></div></div><p>
 			Release Date: November 10, 2015
 		</p><p>
 			Bug Fixes:
@@ -2637,13 +2659,13 @@ restrict access to V1 push.</pre></li></ul></div><p>
 			Quay Enterprise v1.13.x contains long-running migrations and should be updated during a maintenance window where administrators will have several hours of time to dedicate to the database migrating. Quay Enterprise will not be available while these migrations run.
 		</p><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-133">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-132"><div class="titlepage"><div><div><h2 class="title">90. Version 1.13.2</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-132"><div class="titlepage"><div><div><h2 class="title">91. Version 1.13.2</h2></div></div></div><p>
 			Release Date: November 3, 2015
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Fixed 404 API calls redirecting to 404 page (#762)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-132">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-131"><div class="titlepage"><div><div><h2 class="title">91. Version 1.13.1</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-131"><div class="titlepage"><div><div><h2 class="title">92. Version 1.13.1</h2></div></div></div><p>
 			Release Date: November 3, 2015
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Fixed broken database migration (#759)
@@ -2651,7 +2673,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Added OpenGraph preview image (#750, #758)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-131">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-130"><div class="titlepage"><div><div><h2 class="title">92. Version 1.13.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-130"><div class="titlepage"><div><div><h2 class="title">93. Version 1.13.0</h2></div></div></div><p>
 			Release Date: November 2, 2015
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Added new Quay Enterprise rebranding (#723, #738, #735, #745, #746, #748, #747, #751)
@@ -2713,7 +2735,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Improved background worker stability (#471)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-130">Link to this Release</a>
-		</p></section><section class="section" id="rn-1-120"><div class="titlepage"><div><div><h2 class="title">93. Version 1.12.0</h2></div></div></div><p>
+		</p></section><section class="section" id="rn-1-120"><div class="titlepage"><div><div><h2 class="title">94. Version 1.12.0</h2></div></div></div><p>
 			Release Date: September 10, 2015
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					Added experimental Dex login support (#447, #468)
@@ -2763,7 +2785,7 @@ restrict access to V1 push.</pre></li></ul></div><p>
 					Improved internal test suite (#381, #374, #388, #455, #457)
 				</li></ul></div><p>
 			<a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3.7/html-single/red_hat_quay_release_notes#rn-1-120">Link to this Release</a>
-		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm46554065708976"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+		</p></section><div><div xml:lang="en-US" class="legalnotice" id="idm45737914114736"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2022 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
