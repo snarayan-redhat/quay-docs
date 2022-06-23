@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Architecture</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Architecture"/><link rel="next" href="#arch-intro" title="Chapter 1. Red Hat Quay overview"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46164515109808"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Architecture</h1></div><div><h2 class="subtitle">Red Hat Quay Architecture</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm46164491856944">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+<html xmlns="http://www.w3.org/1999/xhtml" class="chrometwo"><head><title>Red Hat Quay Architecture</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css"/><meta name="generator" content="publican v4.3.4"/><meta name="description" content="Red Hat Quay Architecture"/><link rel="next" href="#arch-intro" title="Chapter 1. Red Hat Quay overview"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript" src="Common_Content/scripts/jquery-1.7.1.min.js"> </script><script type="text/javascript" src="Common_Content/scripts/utils.js"> </script><script type="text/javascript" src="Common_Content/scripts/highlight.js/highlight.pack.js"> </script></head><body><div id="chrometwo"><div id="main"><div xml:lang="en-US" class="book" id="idm46594474519648"><div class="titlepage"><div><div class="producttitle"><span class="productname">Red Hat Quay</span> <span class="productnumber">3.7</span></div><div><h1 class="title">Red Hat Quay Architecture</h1></div><div><h2 class="subtitle">Red Hat Quay Architecture</h2></div><div><div xml:lang="en-US" class="authorgroup"><span class="orgname">Red Hat OpenShift Documentation Team</span></div></div><div><a href="#idm46594451343712">Legal Notice</a></div><div><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
 				Red Hat Quay Architecture
-			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#arch-intro">1. Red Hat Quay overview</a></span><ul><li><span class="section"><a href="#scalability_and_high_availability_ha">1.1. Scalability and high availability (HA)</a></span></li><li><span class="section"><a href="#security">1.2. Security</a></span></li><li><span class="section"><a href="#content_distribution">1.3. Content distribution</a></span></li><li><span class="section"><a href="#access_control">1.4. Access control</a></span></li><li><span class="section"><a href="#build_automation">1.5. Build automation</a></span></li><li><span class="section"><a href="#integration">1.6. Integration</a></span></li><li><span class="section"><a href="#rest_api">1.7. REST API</a></span></li><li><span class="section"><a href="#recently_added_features">1.8. Recently added features</a></span></li><li><span class="section"><a href="#other_features">1.9. Other features</a></span></li></ul></li><li><span class="chapter"><a href="#arch-prereqs">2. Red Hat Quay prerequisites</a></span><ul><li><span class="section"><a href="#core-prereqs-storage">2.1. Image storage backend</a></span><ul><li><span class="section"><a href="#supported_on_prem_storage_types">2.1.1. Supported on-prem storage types</a></span></li><li><span class="section"><a href="#supported_public_cloud_storage_types">2.1.2. Supported public cloud storage types</a></span></li></ul></li><li><span class="section"><a href="#core-prereqs-db">2.2. Database backend</a></span></li><li><span class="section"><a href="#core-prereqs-redis">2.3. Redis</a></span></li></ul></li><li><span class="chapter"><a href="#red_hat_quay_infrastructure">3. Red Hat Quay infrastructure</a></span><ul><li><span class="section"><a href="#running_red_hat_quay_on_standalone_hosts">3.1. Running Red Hat Quay on standalone hosts</a></span></li><li><span class="section"><a href="#running_red_hat_quay_on_openshift">3.2. Running Red Hat Quay on OpenShift</a></span></li><li><span class="section"><a href="#running_red_hat_quay_outside_openshift">3.3. Running Red Hat Quay outside OpenShift</a></span></li><li><span class="section"><a href="#core-distinct-registries">3.4. Single versus multiple registries</a></span></li></ul></li><li><span class="chapter"><a href="#sample-quay-on-prem-intro">4. Deploying Red Hat Quay on-prem</a></span><ul><li><span class="section"><a href="#core-example-deployment">4.1. Red Hat Quay example deployments</a></span></li><li><span class="section"><a href="#deployment-topology">4.2. Red Hat Quay deployment topology</a></span></li><li><span class="section"><a href="#deployment-topology-with-storage-proxy">4.3. Red Hat Quay deployment topology with storage proxy</a></span></li></ul></li><li><span class="chapter"><a href="#deploying_red_hat_quay_on_public_cloud">5. Deploying Red Hat Quay on public cloud</a></span><ul><li><span class="section"><a href="#running_red_hat_quay_on_aws">5.1. Running Red Hat Quay on AWS</a></span></li><li><span class="section"><a href="#running_porductname_on_microsoft_azure">5.2. Running {porductname} on Microsoft Azure</a></span></li></ul></li><li><span class="chapter"><a href="#security-intro">6. Red Hat Quay security overview</a></span><ul><li><span class="section"><a href="#clair-intro">6.1. Red Hat Quay vulnerability scanning using Clair</a></span><ul><li><span class="section"><a href="#clair-analyses">6.1.1. Understanding Clair analyses</a></span></li><li><span class="section"><a href="#clairv4-intro">6.1.2. Clair v4</a></span></li><li><span class="section"><a href="#clairv4-arch">6.1.3. Clair v4 architecture</a></span></li><li><span class="section"><a href="#clairv2-to-v4">6.1.4. Migrating from Clair v2 to Clair v4</a></span></li><li><span class="section"><a href="#clairv4-limitations">6.1.5. Clair v4 limitations</a></span></li><li><span class="section"><a href="#clairv4-air-gapped">6.1.6. Air-gapped Clair v4</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#content-distrib-intro">7. Content distribution with Red Hat Quay</a></span><ul><li><span class="section"><a href="#mirroring-intro">7.1. Repository mirroring</a></span><ul><li><span class="section"><a href="#mirroring-using">7.1.1. Using repository mirroring</a></span></li><li><span class="section"><a href="#mirroring-recommend">7.1.2. Repository mirroring recommendations</a></span></li><li><span class="section"><a href="#mirroring-events">7.1.3. Event notifications for mirroring</a></span></li><li><span class="section"><a href="#mirroring-api-intro">7.1.4. Mirroring API</a></span></li></ul></li><li><span class="section"><a href="#georepl-intro">7.2. Geo-replication</a></span><ul><li><span class="section"><a href="#geo_replication_features">7.2.1. Geo-replication features</a></span></li><li><span class="section"><a href="#georepl-prereqs">7.2.2. Geo-replication requirements and constraints</a></span></li><li><span class="section"><a href="#georepl-arch-standalone">7.2.3. Geo-replication using standalone Red Hat Quay</a></span></li><li><span class="section"><a href="#georepl-arch-operator">7.2.4. Geo-replication using the Red Hat Quay Operator</a></span></li><li><span class="section"><a href="#georepl-mixed-storage">7.2.5. Mixed storage for geo-replication</a></span></li></ul></li><li><span class="section"><a href="#mirroring-versus-georepl">7.3. Repository mirroring versus geo-replication</a></span></li><li><span class="section"><a href="#airgap-intro">7.4. Air-gapped / disconnected deployments</a></span><ul><li><span class="section"><a href="#airgap-clair">7.4.1. Using Clair in air-gapped environments</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#access-control-intro">8. Access control in Red Hat Quay</a></span><ul><li><span class="section"><a href="#tenancy-model">8.1. Red Hat Quay tenancy model</a></span></li><li><span class="section"><a href="#repository-organizations-and-users">8.2. Repository organizations and users</a></span><ul><li><span class="section"><a href="#quay-users">8.2.1. Red Hat Quay users</a></span></li><li><span class="section"><a href="#quay-robot-accounts">8.2.2. Red Hat Quay robot accounts</a></span></li><li><span class="section"><a href="#quay-super-users">8.2.3. Red Hat Quay super users</a></span></li></ul></li><li><span class="section"><a href="#permissions">8.3. Permissions</a></span><ul><li><span class="section"><a href="#role-based-access-control">8.3.1. Role-based access control (RBAC)</a></span></li><li><span class="section"><a href="#fine-grained-access-control">8.3.2. Fine-grained access control</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#sizing-intro">9. Red Hat Quay sizing and subscriptions</a></span><ul><li><span class="section"><a href="#sizing-sample">9.1. Red Hat Quay sample sizings</a></span></li><li><span class="section"><a href="#subscription-intro">9.2. Red Hat Quay subscription information</a></span></li><li><span class="section"><a href="#quay-internal-registry-intro">9.3. Using Red Hat Quay with or without internal registry</a></span></li></ul></li></ul></div><section class="chapter" id="arch-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Red Hat Quay overview</h1></div></div></div><p>
+			</div></div></div></div><hr/></div><div class="toc"><ul class="toc"><li><span class="chapter"><a href="#arch-intro">1. Red Hat Quay overview</a></span><ul><li><span class="section"><a href="#scalability_and_high_availability_ha">1.1. Scalability and high availability (HA)</a></span></li><li><span class="section"><a href="#security">1.2. Security</a></span></li><li><span class="section"><a href="#content_distribution">1.3. Content distribution</a></span></li><li><span class="section"><a href="#access_control">1.4. Access control</a></span></li><li><span class="section"><a href="#build_automation">1.5. Build automation</a></span></li><li><span class="section"><a href="#integration">1.6. Integration</a></span></li><li><span class="section"><a href="#rest_api">1.7. REST API</a></span></li><li><span class="section"><a href="#recently_added_features">1.8. Recently added features</a></span></li><li><span class="section"><a href="#other_features">1.9. Other features</a></span></li></ul></li><li><span class="chapter"><a href="#arch-prereqs">2. Red Hat Quay prerequisites</a></span><ul><li><span class="section"><a href="#core-prereqs-storage">2.1. Image storage backend</a></span><ul><li><span class="section"><a href="#supported_image_storage_types">2.1.1. Supported image storage types</a></span></li></ul></li><li><span class="section"><a href="#core-prereqs-db">2.2. Database backend</a></span></li><li><span class="section"><a href="#core-prereqs-redis">2.3. Redis</a></span></li></ul></li><li><span class="chapter"><a href="#red_hat_quay_infrastructure">3. Red Hat Quay infrastructure</a></span><ul><li><span class="section"><a href="#running_red_hat_quay_on_standalone_hosts">3.1. Running Red Hat Quay on standalone hosts</a></span></li><li><span class="section"><a href="#running_red_hat_quay_on_openshift">3.2. Running Red Hat Quay on OpenShift</a></span></li><li><span class="section"><a href="#integrating_standalone_red_hat_quay_with_openshift">3.3. Integrating standalone Red Hat Quay with OpenShift</a></span></li><li><span class="section"><a href="#arch-mirror-registry">3.4. Mirror registry for Red Hat OpenShift</a></span></li><li><span class="section"><a href="#core-distinct-registries">3.5. Single versus multiple registries</a></span></li></ul></li><li><span class="chapter"><a href="#sample-quay-on-prem-intro">4. Deploying Red Hat Quay on-prem</a></span><ul><li><span class="section"><a href="#core-example-deployment">4.1. Red Hat Quay example deployments</a></span></li><li><span class="section"><a href="#deployment-topology">4.2. Red Hat Quay deployment topology</a></span></li><li><span class="section"><a href="#deployment-topology-with-storage-proxy">4.3. Red Hat Quay deployment topology with storage proxy</a></span></li></ul></li><li><span class="chapter"><a href="#deploying_red_hat_quay_on_public_cloud">5. Deploying Red Hat Quay on public cloud</a></span><ul><li><span class="section"><a href="#running_red_hat_quay_on_aws">5.1. Running Red Hat Quay on AWS</a></span></li><li><span class="section"><a href="#running_red_hat_quay_on_microsoft_azure">5.2. Running Red Hat Quay on Microsoft Azure</a></span></li></ul></li><li><span class="chapter"><a href="#security-intro">6. Red Hat Quay security overview</a></span><ul><li><span class="section"><a href="#clair-intro">6.1. Red Hat Quay vulnerability scanning using Clair</a></span><ul><li><span class="section"><a href="#clair-analyses">6.1.1. Understanding Clair analyses</a></span></li><li><span class="section"><a href="#clairv4-intro">6.1.2. Clair v4</a></span></li><li><span class="section"><a href="#clairv4-arch">6.1.3. Clair v4 architecture</a></span></li><li><span class="section"><a href="#clairv2-to-v4">6.1.4. Migrating from Clair v2 to Clair v4</a></span></li><li><span class="section"><a href="#clairv4-limitations">6.1.5. Clair v4 limitations</a></span></li><li><span class="section"><a href="#clairv4-air-gapped">6.1.6. Air-gapped Clair v4</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#content-distrib-intro">7. Content distribution with Red Hat Quay</a></span><ul><li><span class="section"><a href="#mirroring-intro">7.1. Repository mirroring</a></span><ul><li><span class="section"><a href="#mirroring-using">7.1.1. Using repository mirroring</a></span></li><li><span class="section"><a href="#mirroring-recommend">7.1.2. Repository mirroring recommendations</a></span></li><li><span class="section"><a href="#mirroring-events">7.1.3. Event notifications for mirroring</a></span></li><li><span class="section"><a href="#mirroring-api-intro">7.1.4. Mirroring API</a></span></li></ul></li><li><span class="section"><a href="#georepl-intro">7.2. Geo-replication</a></span><ul><li><span class="section"><a href="#geo_replication_features">7.2.1. Geo-replication features</a></span></li><li><span class="section"><a href="#georepl-prereqs">7.2.2. Geo-replication requirements and constraints</a></span></li><li><span class="section"><a href="#georepl-arch-standalone">7.2.3. Geo-replication using standalone Red Hat Quay</a></span></li><li><span class="section"><a href="#georepl-arch-operator">7.2.4. Geo-replication using the Red Hat Quay Operator</a></span></li><li><span class="section"><a href="#georepl-mixed-storage">7.2.5. Mixed storage for geo-replication</a></span></li></ul></li><li><span class="section"><a href="#mirroring-versus-georepl">7.3. Repository mirroring versus geo-replication</a></span></li><li><span class="section"><a href="#airgap-intro">7.4. Air-gapped / disconnected deployments</a></span><ul><li><span class="section"><a href="#airgap-clair">7.4.1. Using Clair in air-gapped environments</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#access-control-intro">8. Access control in Red Hat Quay</a></span><ul><li><span class="section"><a href="#tenancy-model">8.1. Red Hat Quay tenancy model</a></span></li><li><span class="section"><a href="#repository-organizations-and-users">8.2. Repository organizations and users</a></span><ul><li><span class="section"><a href="#quay-users">8.2.1. Red Hat Quay users</a></span></li><li><span class="section"><a href="#quay-robot-accounts">8.2.2. Red Hat Quay robot accounts</a></span></li><li><span class="section"><a href="#quay-super-users">8.2.3. Red Hat Quay super users</a></span></li></ul></li><li><span class="section"><a href="#permissions">8.3. Permissions</a></span><ul><li><span class="section"><a href="#role-based-access-control">8.3.1. Role-based access control (RBAC)</a></span></li><li><span class="section"><a href="#fine-grained-access-control">8.3.2. Fine-grained access control</a></span></li></ul></li></ul></li><li><span class="chapter"><a href="#sizing-intro">9. Red Hat Quay sizing and subscriptions</a></span><ul><li><span class="section"><a href="#sizing-sample">9.1. Red Hat Quay sample sizings</a></span></li><li><span class="section"><a href="#subscription-intro">9.2. Red Hat Quay subscription information</a></span></li><li><span class="section"><a href="#quay-internal-registry-intro">9.3. Using Red Hat Quay with or without internal registry</a></span></li></ul></li></ul></div><section class="chapter" id="arch-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 1. Red Hat Quay overview</h1></div></div></div><p>
 			Red Hat Quay is a trusted, open source container registry platform that runs everywhere, but runs best on Red Hat OpenShift. It scales without limits, from a developer laptop to a container host or Kubernetes, and can be deployed on-prem or on public cloud. Red Hat Quay provides global governance and security controls, with features including image vulnerability scanning, access controls, geo-replication and repository mirroring.
 		</p><p>
 			<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_features.png" alt="Quay features"/></span>
@@ -63,31 +63,29 @@
 					</li><li class="listitem">
 						Regular updates
 					</li></ul></div></section></section><section class="chapter" id="arch-prereqs"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Red Hat Quay prerequisites</h1></div></div></div><p>
-			Before deploying Red Hat Quay, you will need to provision the following:
-		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-					<a class="link" href="#core-prereqs-storage" title="2.1. Image storage backend">Image storage</a>
-				</li><li class="listitem">
-					<a class="link" href="#core-prereqs-db" title="2.2. Database backend">Database</a>
-				</li><li class="listitem">
-					<a class="link" href="#core-prereqs-redis" title="2.3. Redis">Redis</a>
-				</li></ul></div><section class="section" id="core-prereqs-storage"><div class="titlepage"><div><div><h2 class="title">2.1. Image storage backend</h2></div></div></div><p>
-				Red Hat Quay Quay stores all binary blobs in its storage backend. The following conditions apply to image storage:
-			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-						Local storage and NFS should only be used for proof of concept or test setups.
-					</li><li class="listitem">
-						Quay HA requires an HA storage setup.
-					</li><li class="listitem">
-						Geo-replication requires object storage and does not work with local storage.
-					</li></ul></div><section class="section" id="supported_on_prem_storage_types"><div class="titlepage"><div><div><h3 class="title">2.1.1. Supported on-prem storage types</h3></div></div></div><p>
-					Red Hat Quay Quay supports the following on-prem storage types:
+			Before deploying Red Hat Quay, you need to provision image storage, a database, and Redis.
+		</p><section class="section" id="core-prereqs-storage"><div class="titlepage"><div><div><h2 class="title">2.1. Image storage backend</h2></div></div></div><p>
+				Red Hat Quay stores all binary blobs in its storage backend.
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Local storage and NFS</span></dt><dd>
+							While Red Hat Quay can work with local storage and NFS, this should only be used for proof of concept or test setups, as the durability of the binary blobs cannot be guaranteed.
+						</dd><dt><span class="term">HA storage setup</span></dt><dd><p class="simpara">
+							For a Red Hat Quay HA deployment, you must provide HA image storage, for example:
+						</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+									<span class="strong strong"><strong>Red Hat OpenShift Data Foundation</strong></span>, previously known as Red Hat OpenShift Container Storage, is software-defined storage for containers. Engineered as the data and storage services platform for Red Hat OpenShift, Red Hat OpenShift Data Foundation helps teams develop and deploy applications quickly and efficiently across clouds. More information can be found at <a class="link" href="https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation">https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation</a>.
+								</li><li class="listitem">
+									<span class="strong strong"><strong>Ceph Object Gateway</strong></span> (also called RADOS Gateway) is an example of a storage solution that can provide the the object storage needed by Red Hat Quay. Detailed instructions on how to use Ceph storage as a highly available storage backend can be found in the <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploy_red_hat_quay_-_high_availability/preparing_for_red_hat_quay_high_availability#set_up_ceph">Quay High Availability Guide</a>. Further information on Red Hat Ceph Storage and HA setups can be found in the <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/3/pdf/architecture_guide/Red_Hat_Ceph_Storage-3-Architecture_Guide-en-US.pdf">Red Hat Ceph Storage Architecture Guide</a>
+								</li></ul></div></dd><dt><span class="term">Geo-replication</span></dt><dd>
+							Local storage cannot be used for geo-replication, so a supported on-prem or cloud-based object storage solution must be deployed. Localized image storage is provided in each region and image pulls are served from the closest available storage engine. Container image pushes are written to the preferred storage engine for the Quay instance, and will then be replicated, in the background, to the other storage engines. This requires the image storage to be accessible from all regions.
+						</dd></dl></div><section class="section" id="supported_image_storage_types"><div class="titlepage"><div><div><h3 class="title">2.1.1. Supported image storage types</h3></div></div></div><p>
+					Red Hat Quay supports the following on-prem storage types:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							Ceph Rados RGW
 						</li><li class="listitem">
 							OpenStack Swift
 						</li><li class="listitem">
 							RHODF 4 (via NooBaa)
-						</li></ul></div></section><section class="section" id="supported_public_cloud_storage_types"><div class="titlepage"><div><div><h3 class="title">2.1.2. Supported public cloud storage types</h3></div></div></div><p>
-					Red Hat Quay Quay supports the following public cloud storage types:
+						</li></ul></div><p>
+					Red Hat Quay supports the following public cloud storage types:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							AWS S3
 						</li><li class="listitem">
@@ -97,15 +95,13 @@
 						</li></ul></div></section></section><section class="section" id="core-prereqs-db"><div class="titlepage"><div><div><h2 class="title">2.2. Database backend</h2></div></div></div><p>
 				Red Hat Quay stores most of its configuration and all metadata and logs inside its database backend, although logs can be pushed to ElasticSearch if required. PostgreSQL is the preferred database backend since it can be used for both Quay and Clair.
 			</p><p>
-				Since the Red Hat Quay 3.6 release, using MySQL/MariaDB as the database backend for Red Hat Quay is deprecated, and going forward, support will eventually be removed. Until then, MySQL is still supported as per the <a class="link" href="https://access.redhat.com/articles/4067991">support matrix</a> but will not receive additional features or explicit testing coverage. The Red Hat Quay Operator only supports PostgreSQL as a managed database since Red Hat Quay 3.4. External MySQL/MariaDB databases can still be leveraged (setting the database to <code class="literal">unmanaged</code> in the Operator in the process) until support is removed.
+				Since the Red Hat Quay 3.6 release, using MySQL/MariaDB as the database backend for Red Hat Quay is deprecated and support will eventually be removed. Until then, MySQL is still supported as per the <a class="link" href="https://access.redhat.com/articles/4067991">support matrix</a> but will not receive additional features or explicit testing coverage. The Red Hat Quay Operator only supports PostgreSQL as a managed database since Red Hat Quay 3.4. External MySQL/MariaDB databases can still be leveraged (setting the database to <code class="literal">unmanaged</code> in the Operator in the process) until support is removed.
 			</p><p>
 				Deploying Red Hat Quay in a highly available (HA) configuration requires that your database is provisioned for high availablity. If Red Hat Quay is running on public cloud infrastructure, it is recommended that you use the PostgreSQL services provided by your cloud provider.
 			</p><p>
 				Geo-replication requires a single, shared database that is accessible from all regions.
 			</p></section><section class="section" id="core-prereqs-redis"><div class="titlepage"><div><div><h2 class="title">2.3. Redis</h2></div></div></div><p>
-				Red Hat Quay stores builder logs inside a Redis cache. The data stored is ephemeral in nature and as such, Redis does not need to be HA even though it is stateful. If Redis does fail, you will only lose access to build logs.
-			</p><p>
-				You can use a Redis image from the Red Hat Software Collections or from any other source you prefer.
+				Red Hat Quay stores builder logs inside a Redis cache. The data stored is ephemeral in nature and as such, Redis does not need to be HA even though it is stateful. If Redis does fail, you will only lose access to build logs. You can use a Redis image from the Red Hat Software Collections or from any other source you prefer.
 			</p></section></section><section class="chapter" id="red_hat_quay_infrastructure"><div class="titlepage"><div><div><h1 class="title">Chapter 3. Red Hat Quay infrastructure</h1></div></div></div><p>
 			Red Hat Quay runs on any physical or virtual infrastructure, both on-premise or public cloud. Deployments range from simple to massively scaled, including:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
@@ -116,7 +112,7 @@
 					Geographically dispersed across multiple availability zones and regions
 				</li></ul></div><section class="section" id="running_red_hat_quay_on_standalone_hosts"><div class="titlepage"><div><div><h2 class="title">3.1. Running Red Hat Quay on standalone hosts</h2></div></div></div><p>
 				Standalone deployment is a manual process, but it can easily be automated by the customer, for example, using Ansible. All standalone hosts require valid RHEL subscriptions.
-			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Poof-of-concept deployment</span></dt><dd>
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Proof-of-concept deployment</span></dt><dd>
 							Red Hat Quay runs on a machine with image storage, containerized database, Redis, and optionally, Clair security scanning (scanning only works with object storage).
 						</dd><dt><span class="term">Highly available setups</span></dt><dd><p class="simpara">
 							Red Hat Quay and Clair run in containers across multiple hosts, using <code class="literal">systemd</code> to ensure restart on failure/reboot.
@@ -145,83 +141,49 @@
 					</li><li class="listitem">
 						<span class="strong strong"><strong>Simplified Networking:</strong></span> Automated provisioning of load balancers and traffic ingress secured via HTTPS using OpenShift TLS certificates and Routes
 					</li><li class="listitem">
-						<span class="strong strong"><strong>Declarative configuration management:</strong></span> Configurations stored in in CustomResource objects for GitOps-friendly lifecycle management
+						<span class="strong strong"><strong>Declarative configuration management:</strong></span> Configurations stored in CustomResource objects for GitOps-friendly lifecycle management
 					</li><li class="listitem">
 						<span class="strong strong"><strong>Repeatability:</strong></span> Consistency regardless of the number of replicas of Red Hat Quay / Clair
 					</li><li class="listitem">
 						<span class="strong strong"><strong>OpenShift integration:</strong></span> Additional services to leverage OpenShift Monitoring and Alerting facilities to manage multiple Quay deployments on a single cluster
-					</li></ul></div></section><section class="section" id="running_red_hat_quay_outside_openshift"><div class="titlepage"><div><div><h2 class="title">3.3. Running Red Hat Quay outside OpenShift</h2></div></div></div><p>
+					</li></ul></div></section><section class="section" id="integrating_standalone_red_hat_quay_with_openshift"><div class="titlepage"><div><div><h2 class="title">3.3. Integrating standalone Red Hat Quay with OpenShift</h2></div></div></div><p>
 				While the Red Hat Quay Operator ensures seamless deployment and management of Red Hat Quay running on OpenShift, it is also possible to run Red Hat Quay in standalone mode and then serve content to one or many OpenShift clusters, wherever they are running.
 			</p><p>
-				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_deployment_ex2.png" alt="Quay outside OpenShift"/></span>
+				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_deployment_ex2.png" alt="Integrating standalone Quay with OpenShift"/></span>
 			</p><p>
 				A number of Operators are available to help integrate standalone Quay with OpenShift:
 			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Red Hat Quay Cluster Security Operator</span></dt><dd>
 							Relays Quay vulnerability scanning results into the OpenShift Console
 						</dd><dt><span class="term">Red Hat Quay Bridge Operator</span></dt><dd>
 							Ensures seamless integration and user experience for using Red Hat Quay with OpenShift in conjunction with OpenShift Builds and ImageStreams
-						</dd></dl></div></section><section class="section" id="core-distinct-registries"><div class="titlepage"><div><div><h2 class="title">3.4. Single versus multiple registries</h2></div></div></div><p>
-				Many users consider running multiple, distinct registries whereas the preferred approach with Red Hat Quay is to have a single, shared registry. The following table addresses the reasons why a user might want to run multiple registries and how these requirements are addressed in Red Hat Quay:
-			</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46164491512288" scope="col">Multiple registries</th><th align="left" valign="top" id="idm46164494481856" scope="col">Red Hat Quay approach</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Clear separation between development and production
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Use organizations and repositories instead + RBAC
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Clear separation by content origin<br/> (internal/external)
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Use organizations and repositories instead + RBAC
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Required to test registry upgrades given the criticality of the registry for running apps
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Red Hat Quay Operator automates updates, both patch releases as well as minor or major updates that require an ordered sequence of steps to complete
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Separate registry in each datacenter (DC)
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Red Hat Quay can serve content to multiple physically close DCs<br/><br/> HA can stretch across DCs (requires load balancers)<br/><br/> Red Hat Quay Geo-replication can stretch across physically distant DCs (requires global load balancer or DNS-based geo-aware load-balancing)
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Separate registry for each cluster
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Red Hat Quay can serve content to thousands of clusters
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Scalability concerns over single registry
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								Red Hat Quay scales nearly without limits<br/> (The underlying code base is proven to work at scale at Quay.io)
-							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164491512288">
-							<p>
-								Distinct registry configurations
-							</p>
-							</td><td align="left" valign="top" headers="idm46164494481856">
-							<p>
-								In this scenario it might make sense to run two distinct registries
-							</p>
-							</td></tr></tbody></table></div><p>
-				<span class="strong strong"><strong>Recommendation:</strong></span>
+						</dd></dl></div></section><section class="section" id="arch-mirror-registry"><div class="titlepage"><div><div><h2 class="title">3.4. Mirror registry for Red Hat OpenShift</h2></div></div></div><p>
+				The mirror registry for Red Hat OpenShift is small-scale version of Red Hat Quay that you can use as a target for mirroring the required container images of OpenShift Container Platform for disconnected installations.
 			</p><p>
-				Running a shared registry helps you to save storage, infrastructure and operational costs but a dedicated registry may be needed in very specific circumstances.
+				For disconnected deployments of Red Hat OpenShift, a container registry is required to carry out the installation of the clusters. To run a production-grade registry service on such a cluster, you must create a separate registry deployment to install the first cluster. The <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> addresses this need and is included in every OpenShift subscription. It is available for download on the <a class="link" href="https://console.redhat.com/openshift/downloads#tool-mirror-registry">OpenShift console <span class="strong strong"><strong>Downloads</strong></span></a> page.
+			</p><p>
+				The <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> allows users to install a small-scale version of Red Hat Quay and its required components using the <code class="literal">mirror-registry</code> command line interface (CLI) tool. The <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> is deployed automatically with pre-configured local storage and a local database. It also includes auto-generated user credentials and access permissions with a single set of inputs and no additional configuration choices to get started.
+			</p><p>
+				The <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> provides a pre-determined network configuration and reports deployed component credentials and access URLs upon success. A limited set of optional configuration inputs like fully qualified domain name (FQDN) services, superuser name and password, and custom TLS certificates are also provided. This provides users with a container registry so that they can easily create an offline mirror of all Red Hat OpenShift release content when running Red Hat OpenShift in restricted network environments.
+			</p><p>
+				The <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> is limited to hosting images that are required to install a disconnected Red Hat OpenShift cluster, such as Release images or Red Hat Operator images. It uses local storage and content built by customers should not be hosted by the <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span>.
+			</p><p>
+				Unlike Red Hat Quay, the <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> is not a highly-available registry and only local file system storage is supported. Using the <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> with more than one cluster is discouraged, because multiple clusters can create a single point of failure when updating your cluster fleet. It is advised to leverage the <span class="emphasis"><em>mirror registry for Red Hat OpenShift</em></span> to install a cluster that can host a production-grade, highly-available registry such as Red Hat Quay, which can serve Red Hat OpenShift content to other clusters.
+			</p><p>
+				More information is available at <a class="link" href="https://docs.openshift.com/container-platform/4.10/installing/disconnected_install/installing-mirroring-creating-registry.html">Creating a mirror registry with mirror registry for Red Hat OpenShift</a>.
+			</p></section><section class="section" id="core-distinct-registries"><div class="titlepage"><div><div><h2 class="title">3.5. Single versus multiple registries</h2></div></div></div><p>
+				Many users consider running multiple, distinct registries. The preferred approach with Red Hat Quay is to have a single, shared registry:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+						If you want a clear separation between development and production images, or a clear separation by content origin, for example, keeping third-party images distinct from internal ones, you can use organizations and repositories Red Hat Quay, combined with role-based access control (RBAC) to achieve the desired separation.
+					</li><li class="listitem">
+						Given that the image registry is a critical component in an enterprise, you may be tempted to use distinct deployments to test upgrades of the registry software to newer versions. The Red Hat Quay Operator updates the registry for patch releases as well as minor or major updates. This means that any complicated procedures are automated and, as a result, there is no requirement for you to provision multiple instances of the registry to test the upgrade.
+					</li><li class="listitem">
+						With Red Hat Quay, there is no need to have a separate registry for each cluster you deploy. Red Hat Quay is proven to work at scale at <a class="link" href="https://quay.io">quay.io</a>, and can serve content to thousands of clusters.
+					</li><li class="listitem">
+						Even if you have deployments in multiple datacenters, you can still use a single Red Hat Quay instance to serve content to multiple physically-close datacenters, or use the HA functionality with load balancers to stretch across datacenters. Alternatively, you can use the Red Hat Quay geo-replication feature to stretch across physically distant datacenters. This requires the provisioning of a global load balancer or DNS-based geo-aware load balancing.
+					</li><li class="listitem">
+						One scenario where it may be appropriate to run multiple distinct registries, is when you want to specify different configuration for each registry.
+					</li></ul></div><p>
+				In summary, running a shared registry helps you to save storage, infrastructure and operational costs but a dedicated registry may be needed in very specific circumstances.
 			</p></section></section><section class="chapter" id="sample-quay-on-prem-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 4. Deploying Red Hat Quay on-prem</h1></div></div></div><p>
 			The following image shows examples for on-premise configuration, including:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
@@ -234,15 +196,15 @@
 			<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_on-premises_config.png" alt="On-prem sample configuration"/></span>
 		</p><section class="section" id="core-example-deployment"><div class="titlepage"><div><div><h2 class="title">4.1. Red Hat Quay example deployments</h2></div></div></div><p>
 				The following image shows three possible deployments for Red Hat Quay:
-			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-						Proof of concept, single node
-					</li><li class="listitem">
-						Highly available, multi-node in single data center
-					</li><li class="listitem">
-						Highly available, multi-node across multiple data centers
-					</li></ul></div><p>
+			</p><p>
 				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_deployment_ex1.png" alt="Red Hat Quay deployment example"/></span>
-			</p></section><section class="section" id="deployment-topology"><div class="titlepage"><div><div><h2 class="title">4.2. Red Hat Quay deployment topology</h2></div></div></div><p>
+			</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Proof of concept</span></dt><dd>
+							Running Red Hat Quay, Clair and mirroring on a single node, with local image storage and local database
+						</dd><dt><span class="term">Single datacenter</span></dt><dd>
+							Running highly available Red Hat Quay, Clair and mirroring, on multiple nodes, with HA database and image storage
+						</dd><dt><span class="term">Multiple datacenters</span></dt><dd>
+							Running highly available Red Hat Quay, Clair and mirroring, on multiple nodes in multiple datacenters, with HA database and image storage
+						</dd></dl></div></section><section class="section" id="deployment-topology"><div class="titlepage"><div><div><h2 class="title">4.2. Red Hat Quay deployment topology</h2></div></div></div><p>
 				The following image provides a high level overview of a Red Hat Quay deployment topology.
 			</p><p>
 				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_deploy_topology.png" alt="Red Hat Quay deployment topology"/></span>
@@ -272,10 +234,10 @@
 						AWS ElastiCache Redis
 					</li><li class="listitem">
 						EC2 VMs recommendation: M3.Large or M4.XLarge
-					</li></ul></div></section><section class="section" id="running_porductname_on_microsoft_azure"><div class="titlepage"><div><div><h2 class="title">5.2. Running {porductname} on Microsoft Azure</h2></div></div></div><p>
+					</li></ul></div></section><section class="section" id="running_red_hat_quay_on_microsoft_azure"><div class="titlepage"><div><div><h2 class="title">5.2. Running Red Hat Quay on Microsoft Azure</h2></div></div></div><p>
 				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_on_Azure.png" alt="Red Hat Quay on Microsoft Azure"/></span>
 			</p><p>
-				If {porductname} is running on Microsoft Azure, you can use:
+				If Red Hat Quay is running on Microsoft Azure, you can use:
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						Azure managed services such as HA PostgreSQL
 					</li><li class="listitem">
@@ -362,63 +324,63 @@
 						When a <code class="literal">claircore.Manifest</code> is submitted to the LibIndex, the library will index its constituent parts and create a report with its findings.
 					</p><p>
 						When a <code class="literal">claircore.IndexReport</code> is provided to LibVuln, the library will discover vulnerabilities affecting it and generate a <code class="literal">claircore.Volunerability</code> report.
-					</p><section class="section" id="clairv2-compare-v4"><div class="titlepage"><div><div><h5 class="title">6.1.3.1.1. Clair v2 and Clair v4 Comparison</h5></div></div></div><div class="table" id="idm46164490858976"><p class="title"><strong>Table 6.1. Clair v2 and Clair v4 component comparison</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46164489057008" scope="col">Component</th><th align="left" valign="top" id="idm46164494021904" scope="col">Clair v2</th><th align="left" valign="top" id="idm46164494020816" scope="col">Clair v4</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46164489057008">
+					</p><section class="section" id="clairv2-compare-v4"><div class="titlepage"><div><div><h5 class="title">6.1.3.1.1. Clair v2 and Clair v4 Comparison</h5></div></div></div><div class="table" id="idm46594454599872"><p class="title"><strong>Table 6.1. Clair v2 and Clair v4 component comparison</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 25%; " class="col_2"/><col style="width: 25%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46594449968912" scope="col">Component</th><th align="left" valign="top" id="idm46594449967472" scope="col">Clair v2</th><th align="left" valign="top" id="idm46594449966384" scope="col">Clair v4</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46594449968912">
 										<p>
 											API layers
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494021904">
+										</td><td align="left" valign="top" headers="idm46594449967472">
 										<p>
 											In Clair v2, clients were required to provide layers to the API.
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494020816">
+										</td><td align="left" valign="top" headers="idm46594449966384">
 										<p>
 											Clair v4 is manifest-based, providing an easier API for users.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46164489057008">
+										</td></tr><tr><td align="left" valign="top" headers="idm46594449968912">
 										<p>
 											Insights and reports
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494021904">
+										</td><td align="left" valign="top" headers="idm46594449967472">
 										<p>
 											Clair v2 provided only insights on vulnerabilities
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494020816">
+										</td><td align="left" valign="top" headers="idm46594449966384">
 										<p>
 											Clair v4 provides detailed reports on the content of the container, which can be fed to other tools for analyses or inventory purposes.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46164489057008">
+										</td></tr><tr><td align="left" valign="top" headers="idm46594449968912">
 										<p>
 											Architecture
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494021904">
+										</td><td align="left" valign="top" headers="idm46594449967472">
 										<p>
 											Clair v2 ran as a monolithic application.
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494020816">
+										</td><td align="left" valign="top" headers="idm46594449966384">
 										<p>
 											Clair v4 divides functionality across multiple services for ease of development and scaling use cases.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46164489057008">
+										</td></tr><tr><td align="left" valign="top" headers="idm46594449968912">
 										<p>
 											Support for language packages
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494021904">
+										</td><td align="left" valign="top" headers="idm46594449967472">
 										<p>
 											Clair v2 does not support computer language packages.
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494020816">
+										</td><td align="left" valign="top" headers="idm46594449966384">
 										<p>
 											Clair v4 supports Python language packages, with plans of adding more in future versions.
 										</p>
-										</td></tr><tr><td align="left" valign="top" headers="idm46164489057008">
+										</td></tr><tr><td align="left" valign="top" headers="idm46594449968912">
 										<p>
 											Package locator
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494021904">
+										</td><td align="left" valign="top" headers="idm46594449967472">
 										<p>
 											Clair v2 did not provide details on where packages were located inside of the container.
 										</p>
-										</td><td align="left" valign="top" headers="idm46164494020816">
+										</td><td align="left" valign="top" headers="idm46594449966384">
 										<p>
 											Clair v4 identifies where packages are located inside of the container.
 										</p>
@@ -448,7 +410,9 @@
 							On a system with internet access, the vulnerability database updates is performed manually and exported to a disk.
 						</li><li class="listitem">
 							The on-disk data is then transferred to the target system with offline media. It is then manually imported.
-						</li></ul></div></section></section></section><section class="chapter" id="content-distrib-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 7. Content distribution with Red Hat Quay</h1></div></div></div><p>
+						</li></ul></div><p>
+					For more information on air-gapped Clair v4 and using <code class="literal">clairctl</code>, the command line tool, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploy_red_hat_quay_on_openshift_with_the_quay_operator/quay_operator_features#clair-openshift-airgap-update">Manually updating the vulnerability databases for Clair in an air-gapped OpenShift cluster</a>
+				</p></section></section></section><section class="chapter" id="content-distrib-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 7. Content distribution with Red Hat Quay</h1></div></div></div><p>
 			Content distribution features in Red Hat Quay include:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 					<a class="link" href="#mirroring-intro" title="7.1. Repository mirroring">Repository mirroring</a>
@@ -579,7 +543,7 @@
 				</p><p>
 					In the example shown above, the Red Hat Quay Operator is deployed in two separate regions, with a common database and a common Redis instance. Localized image storage is provided in each region and image pulls are served from the closest available storage engine. Container image pushes are written to the preferred storage engine for the Quay instance, and will then be replicated, in the background, to the other storage engines.
 				</p><p>
-					Because the Operator now manages the Clair security scanner and its database separately, geo-replication setups can be leveraged so that they do not manage the Clair database. Instead, an external shared database would be used. Red Hat Quay and Clair support several providers and vendors of PostgreSQL, which can be found in the Quay Enterprise 3.x <a class="link" href="https://access.redhat.com/articles/4067991">test matrix</a>. Additionally, the Operator also supports custom Clair configurations that can be injected into the deployment, which allows users to configure Clair with the connection credentials for the external database.
+					Because the Operator now manages the Clair security scanner and its database separately, geo-replication setups can be leveraged so that they do not manage the Clair database. Instead, an external shared database would be used. Red Hat Quay and Clair support several providers and vendors of PostgreSQL, which can be found in the Red Hat Quay 3.x <a class="link" href="https://access.redhat.com/articles/4067991">test matrix</a>. Additionally, the Operator also supports custom Clair configurations that can be injected into the deployment, which allows users to configure Clair with the connection credentials for the external database.
 				</p></section><section class="section" id="georepl-mixed-storage"><div class="titlepage"><div><div><h3 class="title">7.2.5. Mixed storage for geo-replication</h3></div></div></div><p>
 					Red Hat Quay geo-replication supports the use of different and multiple replication targets, for example, using AWS S3 storage on public cloud and using Ceph storage on-prem. This complicates the key requirement of granting access to all storage backends from all Red Hat Quay pods and cluster nodes. As a result, it is recommended that you:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
@@ -604,99 +568,99 @@
 						Automatic synchronization or mirroring of selected (whitelisted) upstream repositories from external registries into a local Red Hat Quay deployment
 					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 					Repository mirroring and geo-replication can be used simultaneously.
-				</p></div></div><div class="table" id="idm46164494209728"><p class="title"><strong>Table 7.1. Red Hat Quay Repository mirroring versus geo-replication</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46164494203136" scope="col">Feature / Capability</th><th align="left" valign="top" id="idm46164493162400" scope="col">Geo-replication</th><th align="left" valign="top" id="idm46164493161424" scope="col">Repository mirroring</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46164494203136">
+				</p></div></div><div class="table" id="idm46594450648560"><p class="title"><strong>Table 7.1. Red Hat Quay Repository mirroring versus geo-replication</strong></p><div class="table-contents"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 33%; " class="col_1"/><col style="width: 33%; " class="col_2"/><col style="width: 33%; " class="col_3"/></colgroup><thead><tr><th align="left" valign="top" id="idm46594458182976" scope="col">Feature / Capability</th><th align="left" valign="top" id="idm46594458181888" scope="col">Geo-replication</th><th align="left" valign="top" id="idm46594450619456" scope="col">Repository mirroring</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								What is the feature designed to do?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								A shared, global registry
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								Distinct, different registries
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								What happens if replication or mirroring hasn’t been completed yet?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								The remote copy is used (slower)
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								No image is served
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Is access to all storage backends in both regions required?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								Yes (all Red Hat Quay nodes)
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								No (distinct storage)
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Can users push images from both sites to the same repository?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								Yes
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								No
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Is all registry content and configuration identical across all regions (shared database)
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								Yes
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								No
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Can users select individual namespaces or repositories to be mirrored?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								No
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								Yes
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Can users apply filters to synchronization rules?
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								No
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								Yes
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494203136">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594458182976">
 							<p>
 								Are individual / different RBAC configurations allowed in each region
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493162400">
+							</td><td align="left" valign="top" headers="idm46594458181888">
 							<p>
 								No
 							</p>
-							</td><td align="left" valign="top" headers="idm46164493161424">
+							</td><td align="left" valign="top" headers="idm46594450619456">
 							<p>
 								Yes
 							</p>
@@ -705,17 +669,17 @@
 			</p><p>
 				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_air-gapped.png" alt="Air-gapped deployment"/></span>
 			</p><p>
-				The upper deployment in the diagram shows Red Hat Quay and Clair connected to the internet, with an air-gapped OpenShift cluster accessing the Quay registry through an explicit, white-listed hole in the firewall
+				The upper deployment in the diagram shows Red Hat Quay and Clair connected to the internet, with an air-gapped OpenShift cluster accessing the Quay registry through an explicit, white-listed hole in the firewall.
 			</p><p>
 				The lower deployment in the diagram shows Red Hat Quay and Clair running inside the firewall, with image and CVE data transferred to the target system using offline media. The data is exported from a separate Quay and Clair deployment that is connected to the internet.
 			</p><section class="section" id="airgap-clair"><div class="titlepage"><div><div><h3 class="title">7.4.1. Using Clair in air-gapped environments</h3></div></div></div><p>
 					By default, Clair will attempt to run automated updates against Red Hat servers. To run Clair in network environments that are disconnected from the internet:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-							Disable Clair auto-update in the Clair configuration bundle
+							Disable Clair auto-update in the Clair configuration bundle.
 						</li><li class="listitem">
-							Manually update the vulnerability database on a system with internet access and then export to disk
+							Manually update the vulnerability database on a system with internet access and then export to disk.
 						</li><li class="listitem">
-							Transfer the on-disk data to the target system using offline media and then manually import it into Clair
+							Transfer the on-disk data to the target system using offline media and then manually import it into Clair.
 						</li></ul></div><p>
 					Using Clair in air-gapped environments is fully containerized and, as a result, is easy to automate.
 				</p></section></section></section><section class="chapter" id="access-control-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 8. Access control in Red Hat Quay</h1></div></div></div><p>
@@ -723,13 +687,13 @@
 		</p><section class="section" id="tenancy-model"><div class="titlepage"><div><div><h2 class="title">8.1. Red Hat Quay tenancy model</h2></div></div></div><p>
 				<span class="inlinemediaobject"><img src="images/178_Quay_architecture_0821_tenancy_model.png" alt="Quay tenancy model"/></span>
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-						<span class="strong strong"><strong>Organizations</strong></span> provide a way of sharing repositories under a common namespace that does not belong to a single user, but rather to many users in a shared setting (such as a company).
+						<span class="strong strong"><strong>Organizations</strong></span> provide a way of sharing repositories under a common namespace which does not belong to a single user, but rather to many users in a shared setting (such as a company).
 					</li><li class="listitem">
-						<span class="strong strong"><strong>Teams</strong></span> provide a way for an organization to delegate permissions (both global and on specific repositories) to sets or groups of users
+						<span class="strong strong"><strong>Teams</strong></span> provide a way for an organization to delegate permissions (both global and on specific repositories) to sets or groups of users.
 					</li><li class="listitem">
-						<span class="strong strong"><strong>Users</strong></span> can log in to a registry through the Quay web UI or a client (such as <code class="literal">podman login</code>). Each users automatically gets a user namespace, for example, <code class="literal">quay-server.example.com/user/&lt;username&gt;</code>
+						<span class="strong strong"><strong>Users</strong></span> can log in to a registry through the Red Hat Quay web UI or a client (such as <code class="literal">podman login</code>). Each user automatically gets a user namespace, for example, <code class="literal">quay-server.example.com/user/&lt;username&gt;</code>.
 					</li><li class="listitem">
-						<span class="strong strong"><strong>Super users</strong></span> have enhanced access and privileges via the Super User Admin Panel in the user interface and through Super User API calls that are not visible or accessible to normal users
+						<span class="strong strong"><strong>Super users</strong></span> have enhanced access and privileges via the Super User Admin Panel in the user interface and through Super User API calls that are not visible or accessible to normal users.
 					</li><li class="listitem">
 						<span class="strong strong"><strong>Robot accounts</strong></span> provide automated access to repositories for non-human users such as pipeline tools and are similar in nature to OpenShift service accounts. Permissions can be granted to a robot account in a repository by adding that account like any other user or team.
 					</li></ul></div></section><section class="section" id="repository-organizations-and-users"><div class="titlepage"><div><div><h2 class="title">8.2. Repository organizations and users</h2></div></div></div><p>
@@ -746,29 +710,29 @@
 						<span class="strong strong"><strong>Managing team members</strong></span>: used to manage teams within the organization.
 					</li><li class="listitem"><p class="simpara">
 						<span class="strong strong"><strong>Defined permissions</strong></span>:
-					</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46164493622848" scope="col">Permission</th><th align="left" valign="top" id="idm46164493621760" scope="col">Abilities</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46164493622848">
+					</p><div class="informaltable"><table class="lt-4-cols lt-7-rows"><colgroup><col style="width: 50%; " class="col_1"/><col style="width: 50%; " class="col_2"/></colgroup><thead><tr><th align="left" valign="top" id="idm46594453707040" scope="col">Permission</th><th align="left" valign="top" id="idm46594453705952" scope="col">Abilities</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46594453707040">
 									<p>
 										<span class="strong strong"><strong>Members</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46164493621760">
+									</td><td align="left" valign="top" headers="idm46594453705952">
 									<p>
 										Inherits all permissions sets for the team
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm46164493622848">
+									</td></tr><tr><td align="left" valign="top" headers="idm46594453707040">
 									<p>
 										<span class="strong strong"><strong>Creator</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46164493621760">
+									</td><td align="left" valign="top" headers="idm46594453705952">
 									<p>
-										All member positions, plus the ability to create new repositories
+										All member permissions, plus the ability to create new repositories
 									</p>
-									</td></tr><tr><td align="left" valign="top" headers="idm46164493622848">
+									</td></tr><tr><td align="left" valign="top" headers="idm46594453707040">
 									<p>
 										<span class="strong strong"><strong>Admin</strong></span>
 									</p>
-									</td><td align="left" valign="top" headers="idm46164493621760">
+									</td><td align="left" valign="top" headers="idm46594453705952">
 									<p>
-										Full administrative access to the organization, including the ability to create news, add members, and set permissions.
+										Full administrative access to the organization, including the ability to create new repositories, add members, and set permissions.
 									</p>
 									</td></tr></tbody></table></div></li></ul></div><section class="section" id="quay-users"><div class="titlepage"><div><div><h3 class="title">8.2.1. Red Hat Quay users</h3></div></div></div><p>
 					User accounts allow individuals to log in through the Red Hat Quay UI or a client, such as <code class="literal">podman login</code>. Usernames must be unique, and they cannot be changed once invited to an organization. After a user account is established, options to sign in via Google or GitHub can be added.
@@ -779,21 +743,21 @@
 				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 						User namespaces are different from Quay organizations. There are no teams, usage logs, default permissions, or OAuth applications. By comparison, organizations are listed under quay.example.com/organization.
 					</p></div></div><p>
-					Users who are not members of an organization can be added to the repository and given permissions. External users are marked with a special character inside of the <span class="strong strong"><strong>Users and Robot Permissions</strong></span> section under the <span class="strong strong"><strong>Repository Settings</strong></span> tab. They are also shown under the <span class="strong strong"><strong>Collaborators View</strong></span> tab on on the organization level of the <span class="strong strong"><strong>Teams and Membership</strong></span> page.
+					Users who are not members of an organization can be added to the repository and given permissions. External users are marked with a special character in the <span class="strong strong"><strong>Users and Robot Permissions</strong></span> section under the <span class="strong strong"><strong>Repository Settings</strong></span> tab. They are also shown under the <span class="strong strong"><strong>Collaborators View</strong></span> tab on on the organization level of the <span class="strong strong"><strong>Teams and Membership</strong></span> page.
 				</p></section><section class="section" id="quay-robot-accounts"><div class="titlepage"><div><div><h3 class="title">8.2.2. Red Hat Quay robot accounts</h3></div></div></div><p>
 					Robot accounts are named tokens that hold credentials for accessing external repositories. By assigning credentials to a robot, that robot can be used across multiple mirrored repositories that need to access the same external registry.
 				</p><p>
-					Robot accounts are managed inside of the <span class="strong strong"><strong>Robot Accounts</strong></span> tab. They can only belong to one organization, but can be assigned to multiple Teams.
+					Robot accounts are managed on the <span class="strong strong"><strong>Robot Accounts</strong></span> tab. They can only belong to one organization, but can be assigned to multiple Teams.
 				</p><div class="admonition note"><div class="admonition_header">Note</div><div><p>
 						Teams and users can belong to multiple organizations.
 					</p></div></div><p>
-					For more information on robot accounts, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/manage_red_hat_quay/index#working-with-mirrored-repo">Working with mirrored repositories</a>.
+					For more information on robot accounts, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/use_red_hat_quay/index#allow-robot-access-user-repo">Allowing robot access to a user repository</a>.
 				</p></section><section class="section" id="quay-super-users"><div class="titlepage"><div><div><h3 class="title">8.2.3. Red Hat Quay super users</h3></div></div></div><p>
 					<code class="literal">Super users</code> are a group of Red Hat Quay users with enhanced access and privileges, including:
 				</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 							Super user API calls that are not visible or accessible to normal users.
 						</li><li class="listitem"><p class="simpara">
-							Access to the <code class="literal">Super User Admin Panel</code>, which allows users to
+							Access to the <code class="literal">Super User Admin Panel</code>, which allows users to:
 						</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
 									Change a user’s email address, password, delete, or disable users.
 								</li><li class="listitem">
@@ -853,9 +817,9 @@
 					</p></section><section class="section" id="ldap-filtering"><div class="titlepage"><div><div><h4 class="title">8.3.2.2. LDAP filtering</h4></div></div></div><p>
 						Lightweight Directory Access Protocol (LDAP) is an open, vendor neutral, industry standard application protocol for accessing and maintaining distributed directory information services over an IP network. Red Hat Quay supports using LDAP as an identity provider. Red Hat Quay users can now apply additional filters for lookup queries if LDAP / AD authentication is used. For information on setting up LDAP authentication for Red Hat Quay, see <a class="link" href="https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/manage_red_hat_quay/ldap-authentication-setup-for-quay-enterprise">LDAP authentication setup for Red Hat Quay</a>.
 					</p></section><section class="section" id="quay-sso-keycloak"><div class="titlepage"><div><div><h4 class="title">8.3.2.3. Red Hat Quay and Red Hat SSO / Keycloak</h4></div></div></div><p>
-						Quay Enterprise can support authentication via OpenID Connect (OIDC). Red Hat Single Sign On (SSO) is an OIDC provider that allows administrators to have a seamless authentication integration between Quay Enterprise and other application platforms such as Red Hat OpenShift Container Platform.
+						Red Hat Quay can support authentication via OpenID Connect (OIDC). Red Hat Single Sign On (SSO) is an OIDC provider that allows administrators to have a seamless authentication integration between Red Hat Quay and other application platforms such as Red Hat OpenShift Container Platform.
 					</p><p>
-						Red Hat Quay and Red Hat SSO / Keycloak requires that TLS/SSL is properly configured to proceed with setup. Red Hat SSO supports many different types of OIDC. Quay Enterprise, however, only supports OIDC clients configured for <a class="link" href="https://access.redhat.com/solutions/3496181">Confidential Client Credentials</a>. For more information configuring Red Hat SSO, see <a class="link" href="https://access.redhat.com/solutions/3566061">Quay Enterprise with Red Hat Single Sign On / Keycloak</a>.
+						Red Hat Quay and Red Hat SSO / Keycloak requires that TLS/SSL is properly configured to proceed with setup. Red Hat SSO supports many different types of OIDC. Red Hat Quay, however, only supports OIDC clients configured for <a class="link" href="https://access.redhat.com/solutions/3496181">Confidential Client Credentials</a>. For more information configuring Red Hat SSO, see <a class="link" href="https://access.redhat.com/solutions/3566061">Red Hat Quay with Red Hat Single Sign On / Keycloak</a>.
 					</p></section></section></section></section><section class="chapter" id="sizing-intro"><div class="titlepage"><div><div><h1 class="title">Chapter 9. Red Hat Quay sizing and subscriptions</h1></div></div></div><p>
 			Scalability of Red Hat Quay is one of its key strengths, with a single code base supporting a broad spectrum of deployment sizes, including:
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
@@ -865,7 +829,7 @@
 				</li><li class="listitem">
 					High-end deployment such as <code class="literal">Quay.io</code> that can server thousands of Kubernetes clusters world-wide
 				</li></ul></div><p>
-			Since sizing heavily depends on a multitude of factors, such as the number of users, images, concurrent pulls and pushes, etc., there are no standard sizing recommendations.
+			Since sizing heavily depends on a multitude of factors, such as the number of users, images, concurrent pulls and pushes, there are no standard sizing recommendations.
 		</p><p>
 			The following are the minimum requirements for systems running Red Hat Quay (per container/pod instance):
 		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
@@ -882,143 +846,143 @@
 			Stateless components of Red Hat Quay can be scaled out but this will cause a heavier load on stateful backend services.
 		</p><section class="section" id="sizing-sample"><div class="titlepage"><div><div><h2 class="title">9.1. Red Hat Quay sample sizings</h2></div></div></div><p>
 				The following table shows typical sizing for three deployment sizes: proof of concept, mid-size, and high-end. Whether a deployment runs appropriately with the same metrics will depend on many other factors not shown below.
-			</p><div class="informaltable"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 40%; " class="col_1"/><col style="width: 20%; " class="col_2"/><col style="width: 20%; " class="col_3"/><col style="width: 20%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm46164494496384" scope="col">Metric</th><th align="center" valign="top" id="idm46164494495408" scope="col">Proof of concept</th><th align="center" valign="top" id="idm46164494494320" scope="col">Mid-size</th><th align="center" valign="top" id="idm46164494493232" scope="col">High End<br/> (Quay.io)</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46164494496384">
+			</p><div class="informaltable"><table class="gt-4-cols lt-7-rows"><colgroup><col style="width: 40%; " class="col_1"/><col style="width: 20%; " class="col_2"/><col style="width: 20%; " class="col_3"/><col style="width: 20%; " class="col_4"/></colgroup><thead><tr><th align="left" valign="top" id="idm46594453321648" scope="col">Metric</th><th align="center" valign="top" id="idm46594453320560" scope="col">Proof of concept</th><th align="center" valign="top" id="idm46594453319472" scope="col">Mid-size</th><th align="center" valign="top" id="idm46594453318384" scope="col">High End<br/> (Quay.io)</th></tr></thead><tbody><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								No. of Quay containers by default
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								4
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								15
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								No. of Quay containers max at scale-out
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								N/A
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								8
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								30
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								No. of Clair containers by default
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								3
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								10
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								No. of Clair containers max at scale-out
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								N/A
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								6
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								15
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								No. of mirroring pods (to mirror 100 repos)
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								1
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								5-10
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								N/A
 							</p>
-							</td></tr><tr><td align="left" valign="middle" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="middle" headers="idm46594453321648">
 							<p>
 								Database sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								2 -4 Cores<br/> 6-8 GB RAM<br/> 10-20GB disk
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								4-8 Cores<br/> 6-32 GB RAM<br/> 100GB-1TB disk
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								32 cores<br/> 244GB<br/> 1+ TB disk
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								Object storage backend sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								10-100 GB
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								1 - 20 TB
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								50+ TB up to PB
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								Redis cache sizing
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408"> </td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453320560"> </td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								2 Cores<br/> 2-4 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								4 cores <br/> 28 GB RAM
 							</p>
-							</td></tr><tr><td align="left" valign="top" headers="idm46164494496384">
+							</td></tr><tr><td align="left" valign="top" headers="idm46594453321648">
 							<p>
 								Underlying node sizing<br/> (physical or virtual)
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494495408">
+							</td><td align="center" valign="top" headers="idm46594453320560">
 							<p>
 								4 Cores<br/> 8 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494494320">
+							</td><td align="center" valign="top" headers="idm46594453319472">
 							<p>
 								4-6 Cores<br/> 12-16 GB RAM
 							</p>
-							</td><td align="center" valign="top" headers="idm46164494493232">
+							</td><td align="center" valign="top" headers="idm46594453318384">
 							<p>
 								Quay:<br/> 13 cores<br/> 56GB RAM<br/><br/> Clair:<br/> 2 cores<br/> 4 GB RAM
 							</p>
@@ -1035,15 +999,15 @@
 			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 						There is no limit on the number of pods (Quay, Clair, Builder, etc.) you can deploy.
 					</li><li class="listitem">
-						Quay pods can run in multiple data centers or availability zones.
+						Red Hat Quay pods can run in multiple data centers or availability zones.
 					</li><li class="listitem">
 						Storage and database backends can be deployed across multiple data centers or availability zones, but only as a single, shared storage backend and single, shared database backend.
 					</li><li class="listitem">
-						Quay can manage content for an unlimited number of clusters or standalone servers.
+						Red Hat Quay can manage content for an unlimited number of clusters or standalone servers.
 					</li><li class="listitem">
-						Clients can access to the Quay deployment irrespective of their physical location.
+						Clients can access the Quay deployment irrespective of their physical location.
 					</li><li class="listitem">
-						You can deploy Quay on OpenShift infrastructure nodes to minimize subscription requirements.
+						You can deploy Red Hat Quay on OpenShift infrastructure nodes to minimize subscription requirements.
 					</li><li class="listitem">
 						You can run the Container Security Operator (CSO) and the Quay Bridge Operator (QBO) on your OpenShift clusters at no additional cost.
 					</li></ul></div><div class="admonition note"><div class="admonition_header">Note</div><div><p>
@@ -1054,7 +1018,7 @@
 				Red Hat Quay can be used as an external registry in front of multiple OpenShift clusters with their internal registries.
 			</p><p>
 				Red Hat Quay can also be used in place of the internal registry when it comes to automating builds and deployment rollouts. The required coordination of <code class="literal">Secrets</code> and <code class="literal">ImageStreams</code> is automated by the Quay Bridge Operator, which can be launched from the OperatorHub for OpenShift.
-			</p></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm46164491856944"><h1 class="legalnotice">Legal Notice</h1><div class="para">
+			</p></section></section><div><div xml:lang="en-US" class="legalnotice" id="idm46594451343712"><h1 class="legalnotice">Legal Notice</h1><div class="para">
 		Copyright <span class="trademark"/>© 2022 Red Hat, Inc.
 	</div><div class="para">
 		The text of and illustrations in this document are licensed by Red Hat under a Creative Commons Attribution–Share Alike 3.0 Unported license ("CC-BY-SA"). An explanation of CC-BY-SA is available at <a class="uri" href="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</a>. In accordance with CC-BY-SA, if you distribute this document or an adaptation of it, you must provide the URL for the original version.
