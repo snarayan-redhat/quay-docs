@@ -1,5 +1,0 @@
-[[config-preconfigure-automation-intro]]
-= Automation options
-
-* xref:config-preconfigure-automation[Pre-configuring Quay for automation]
-* xref:first-user-api[Using the API to create the first user]

@@ -1,4 +1,0 @@
-[[arch-prereqs]]
-= {productname} prerequisites
-
-Before deploying {productname}, you need to provision image storage, a database, and Redis.
